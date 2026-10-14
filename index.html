@@ -1,0 +1,1454 @@
+<!doctype html><html lang="ko"><head><meta name="robots" content="noindex, nofollow, noarchive"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#122c38"><title>🎱 K2당구장 · 내 기록 홈</title>
+<style>
+:root{--bg1:#a8d2f6;--bg2:#8fc4f3;--surface:#f4f9ff;--surface2:#e9f4ff;--line:#b9d6f0;--ink:#0e2d63;--muted:#5b78a8;--gold:#f8c93a;--green:#2f8f65;--red:#f26479;--soft-yellow:#fff4c9;color-scheme:light}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--ink);font:15px/1.5 system-ui,'Malgun Gothic',sans-serif}button,input,select{font:inherit}button{cursor:pointer}.page{max-width:980px;margin:auto;padding:15px 16px 40px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 0 10px}h1{font-size:21px;letter-spacing:-.05em;margin:0;color:var(--ink)}h2{font-size:19px;margin:0 0 13px;color:var(--ink)}h3{font-size:15px;margin:0 0 12px;color:var(--ink)}p{margin:0}.muted{color:var(--muted);font-size:13px}.banner{background:linear-gradient(135deg,#dff0ff,#cfe6fb);border:1px solid var(--line);border-radius:22px;margin:15px 0;padding:19px 21px;box-shadow:0 10px 24px rgba(36,85,145,.08)}.banner strong{font-size:22px}.tag{background:#fff3c0;color:#8d6700;border-radius:100px;padding:5px 10px;font-size:11px;white-space:nowrap}.tabs{display:flex;gap:6px;overflow:auto;border-bottom:1px solid rgba(44,96,160,.12);margin-bottom:18px}.tab{border:0;border-bottom:3px solid transparent;background:none;color:var(--muted);padding:13px 13px;white-space:nowrap}.tab.active{color:var(--ink);border-color:var(--gold);font-weight:750}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}.stat{border:1px solid var(--line);background:rgba(255,255,255,.85);border-radius:20px;padding:14px;box-shadow:0 8px 20px rgba(28,78,137,.06)}.stat span{display:block;color:var(--muted);font-size:12px}.stat b{font-size:26px;letter-spacing:-.05em;color:var(--ink)}.card{border:1px solid var(--line);background:rgba(255,255,255,.82);backdrop-filter:blur(2px);border-radius:24px;padding:19px;margin-bottom:13px;box-shadow:0 12px 30px rgba(29,79,137,.08)}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:13px;font-size:13px;font-weight:650}.field input,.field select,select.switch{width:100%;background:#f8fbff;border:1px solid var(--line);border-radius:14px;color:var(--ink);padding:11px 12px;min-width:0}.field input:focus,.field select:focus{outline:2px solid var(--gold)}button.primary{background:linear-gradient(180deg,#ffd84f,#f5ca3c);color:#16305d;border:0;border-radius:14px;padding:11px 17px;font-weight:800;box-shadow:0 6px 14px rgba(245,202,60,.24)}button.secondary{background:linear-gradient(180deg,#ffe26d,#f7d54c);color:#0e2d63;border:0;border-radius:14px;padding:9px 12px;font-weight:800}button.danger{background:linear-gradient(180deg,#ff7f8e,#f26479);color:#fff;border:0;border-radius:14px;padding:9px 12px;font-weight:800}button.ghost{background:#dff0ff;color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:8px 11px}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:430px}th,td{padding:11px 9px;text-align:left;border-bottom:1px solid rgba(44,96,160,.12);white-space:nowrap;font-size:13px}th{color:var(--muted);font-weight:550}tbody tr:last-child td{border:0}.good{color:var(--green)}.pending{color:#c58a00}.bad{color:var(--red)}.game{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid rgba(44,96,160,.12);padding:14px 0}.game:first-child{border-top:0}.game strong{font-size:15px}.small{font-size:12px}.pill{display:inline-block;border-radius:999px;background:var(--surface2);padding:5px 10px;margin-top:4px;font-size:11px}.empty{color:var(--muted);text-align:center;padding:24px}.note{background:#eef7ff;border-left:4px solid var(--gold);border-radius:12px;padding:12px 14px;color:#3d5685;font-size:12px;margin:12px 0}.alert{background:#ffe6ea;color:#b13f51;padding:10px 13px;border-radius:12px;margin-bottom:12px;display:none}.success{background:#e6f7ef;color:#2d7d59;padding:10px 13px;border-radius:12px;margin-bottom:12px;display:none}.flex{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.switch{max-width:180px}.foot{color:#47668f;text-align:center;font-size:12px;margin-top:25px}.player-dot{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:8px;vertical-align:-1px;box-shadow:0 1px 4px rgba(0,0,0,.15)}.player-yellow{background:#ffd21f}.player-white{background:#fff;border:1px solid #d7dce5}.scoreboard{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:stretch}.player-card{border:1px solid var(--line);border-radius:24px;padding:18px 16px;background:rgba(255,255,255,.82)}.player-card.current-turn{border:2px solid var(--gold);box-shadow:0 8px 22px rgba(246,203,59,.18)}.player-card .name-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.player-card .player-name{font-size:16px;font-weight:800;color:var(--ink)}.turn-pill{background:var(--soft-yellow);color:#8d6700;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.scoreline{display:flex;align-items:flex-end;gap:8px;margin:6px 0 14px}.scoreline .big-score{font-size:64px;line-height:1;font-weight:900;letter-spacing:-.06em}.scoreline .target{font-size:22px;color:var(--muted);margin-bottom:8px}.yellow-text{color:#f4b900}.white-text{color:#16305d}.statrow{display:flex;gap:22px;padding-top:12px;border-top:1px solid rgba(44,96,160,.12);font-size:13px;color:var(--muted)}.statrow b{margin-left:4px;color:var(--ink)}.vslabel{display:flex;align-items:center;justify-content:center;color:#6b86b3;font-weight:900;font-size:24px}.live-progress{display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap}.steps{display:flex;align-items:center;gap:10px;flex:1;min-width:250px}.step-chip{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;color:var(--muted);font-weight:700}.step-chip .circle{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;background:#d6e9fb;color:#4a6e9f}.step-chip.active .circle{background:#ffd54a;color:#12305f}.step-chip.active{color:#d09900}.step-line{flex:1;height:4px;border-radius:999px;background:#bdd9f5}.turn-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}.turn-header .total-box{display:flex;align-items:center;gap:10px}.turn-header .total-badge{background:var(--soft-yellow);color:#8d6700;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800}.turn-header .turn-points{font-size:40px;line-height:1;font-weight:900;color:#d79b00}.control-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px}.score-btn{min-height:112px;padding:16px 5px;font-size:38px;font-weight:900;border-radius:22px;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;letter-spacing:-.03em}.score-btn .score-sub{display:block;margin-top:8px;font-size:13px;line-height:1.1;font-weight:850;opacity:.95}.btn-minus{background:linear-gradient(180deg,#ff8b9a,#f26479);color:#fff;box-shadow:0 10px 22px rgba(242,100,121,.20)}.btn-zero{background:linear-gradient(180deg,#f8fcff,#d8eeff);color:var(--ink);border:3px solid #7fb4e0;box-shadow:0 12px 26px rgba(80,136,196,.24), inset 0 1px 0 rgba(255,255,255,.9)}.btn-zero .score-sub{color:#315b8d}.btn-plus1{background:linear-gradient(180deg,#ffe26d,#f7d54c);color:var(--ink);box-shadow:0 10px 22px rgba(245,202,60,.22)}.btn-plus2{background:linear-gradient(180deg,#ff7d86,#ff606d);color:#fff;box-shadow:0 10px 22px rgba(255,96,109,.20)}.recent-scorechips{display:flex;gap:8px;flex-wrap:wrap}.recent-scorechips span{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 12px;border-radius:14px;font-weight:800}.chip-plus{background:#f7dc6a;color:#15315f}.chip-zero{background:#cfe6fb;color:#15315f}.chip-minus{background:#f598a6;color:#fff}.brand-title{display:flex;align-items:center;gap:10px}.brand-balls{display:flex;align-items:center}.brand-ball{width:22px;height:22px;border-radius:50%;display:inline-block;margin-right:-6px;border:2px solid rgba(255,255,255,.75);box-shadow:0 2px 8px rgba(0,0,0,.12)}.ball-yellow{background:#ffd21f}.ball-red{background:#ef4f64}.ball-white{background:#ffffff}@media(max-width:650px){.page{padding:9px 12px 24px}h1{font-size:18px}.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.scoreboard{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.scoreboard .vslabel{display:none}.player-card{padding:12px 10px}.player-card .player-name{font-size:14px}.scoreline{flex-wrap:wrap;gap:4px}.scoreline .big-score{font-size:clamp(36px,10.5vw,52px)}.scoreline .target{font-size:16px;margin-bottom:3px}.statrow{flex-wrap:wrap;gap:4px 12px}.turn-pill{font-size:10px;padding:3px 6px}.card{padding:14px}.banner{padding:16px}.banner strong{font-size:20px}.game{align-items:flex-start;flex-direction:column}.tab{font-size:13px;padding:11px}.switch{max-width:130px}.control-buttons{gap:10px}.score-btn{min-height:96px;font-size:32px;padding:14px 4px}.score-btn .score-sub{font-size:11px;margin-top:6px}.scoreline .big-score{font-size:54px}.turn-header{flex-direction:column;align-items:flex-start}.turn-header .total-box{align-self:flex-end}.live-progress{align-items:flex-start}.steps{min-width:0;width:100%}}
+@media(max-width:390px){.turn-pill{display:none}.player-card .name-row{min-height:25px}.scoreline .big-score{font-size:42px}.statrow{font-size:12px}}
+/* 현재 공격 선수: 작은 화면에서도 한눈에 보이는 강조 */
+.attacker-banner{background:#163a72;color:#fff;border:1px solid #204f91;border-left:7px solid #ffce39;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;margin:0 0 13px;min-height:64px}
+.attacker-banner.white-turn{border-left-color:#fff;background:#265382}
+.attacker-main{display:flex;align-items:center;gap:12px;min-width:0}
+.attacker-ball{width:31px;height:31px;flex:none;border-radius:50%;border:2px solid rgba(255,255,255,.85);background:#ffd21f;box-shadow:0 2px 7px #0003}
+.attacker-banner.white-turn .attacker-ball{background:#fff}
+.attacker-subtitle{font-size:11px;font-weight:750;letter-spacing:.04em;color:#dceaff}
+.attacker-name{font-size:23px;font-weight:900;letter-spacing:-.05em;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.attacker-inning{font-size:12px;white-space:nowrap;font-weight:850;padding:6px 9px;border:1px solid #9bb9df;border-radius:999px;color:#fff}
+.player-card.current-turn{border:3px solid #e7b900;background:#fff8dd;box-shadow:0 8px 24px rgba(201,151,0,.18);padding:16px 14px}
+.player-card.current-turn.white-turn{border-color:#4372ac;background:#e5f2ff;box-shadow:0 8px 24px rgba(50,92,150,.2)}
+.player-card.waiting-turn{background:#f0f5fc;border-color:#d7e1f0}
+.turn-pill{background:#173e78!important;color:#fff!important;border-radius:8px;font-size:11px;padding:6px 8px;white-space:nowrap}
+.turn-pill.wait-pill{background:#e3ebf6!important;color:#667d9d!important}
+@media(max-width:650px){.attacker-banner{padding:10px 11px;min-height:57px}.attacker-name{font-size:20px}.attacker-ball{width:26px;height:26px}.attacker-main{gap:8px}.attacker-inning{font-size:11px;padding:5px 7px}.player-card.current-turn{padding:10px 8px}.player-card .name-row{flex-wrap:wrap;gap:6px}.turn-pill{font-size:10px}}
+@media(max-width:390px){.turn-pill{display:inline-flex}.attacker-name{font-size:18px}.attacker-banner{margin-bottom:10px}}
+.compact-record{padding-top:13px;padding-bottom:13px}.inning-scroll{max-height:153px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;border:1px solid var(--line);border-radius:12px}.inning-table{min-width:0;width:100%;border-collapse:collapse;table-layout:fixed}.inning-table th,.inning-table td{text-align:center;height:39px;padding:7px 5px;white-space:nowrap;border-bottom:1px solid var(--line)}.inning-table thead th{height:36px;background:#e0efff;position:sticky;top:0;z-index:1;color:var(--ink);font-weight:700}.inning-table tbody tr:last-child td{border-bottom:0}.inning-table tbody tr:nth-child(even){background:rgba(233,244,255,.45)}
+/* 2026-10-13: 한 톤 깊은 블루 배경 + 현재 공격 선수 흰색 카드 */
+:root{--bg1:#95c7f0;--bg2:#80b8e8;--line:#b0cee9}
+.scoreboard{background:#a6cdeb;padding:9px;border-radius:23px}
+.player-card.waiting-turn{background:#dceafa;border:2px solid #bed3e7;box-shadow:none;opacity:.90}
+.player-card.current-turn{background:#fff;border:3px solid #e8b92a;box-shadow:0 9px 24px rgba(91,91,91,.18);padding:16px 14px}
+.player-card.current-turn.white-turn{background:#fff;border:3px solid #fff;box-shadow:0 0 0 3px rgba(40,89,145,.50),0 9px 24px rgba(30,65,110,.22);padding:16px 14px}
+.player-card.current-turn.white-turn .turn-pill{background:#254f85!important}
+.player-card.current-turn .player-name{color:#123362}
+@media(max-width:650px){.scoreboard{padding:7px;gap:9px}.player-card.current-turn,.player-card.current-turn.white-turn{padding:10px 8px}}
+
+/* 2026-10-13: 노란공 선수 카드 항상 노랑 계열로 구분 */
+.scoreboard{background:#a6cdeb;padding:9px;border-radius:23px}
+.player-card.yellow-side{background:#f6e89f;border:2px solid #dfc85e;box-shadow:none;opacity:1}
+.player-card.white-side{background:#f8fbff;border:2px solid #d7e4f0;box-shadow:none;opacity:1}
+.player-card.yellow-side.current-turn{background:#ffe98d;border:3px solid #f0c400;box-shadow:0 10px 24px rgba(211,163,0,.24)}
+.player-card.white-side.current-turn{background:#fff;border:3px solid #fff;box-shadow:0 0 0 3px rgba(36,84,137,.48),0 10px 24px rgba(29,66,110,.20)}
+.player-card.waiting-turn .turn-pill{background:#e7eef7!important;color:#627b9e!important}
+.player-card.yellow-side .scoreline .big-score{color:#e2aa00}
+.player-card.white-side .scoreline .big-score{color:#16305d}
+.player-card.yellow-side .statrow{border-top-color:rgba(199,163,40,.22)}
+.player-card.white-side .statrow{border-top-color:rgba(44,96,160,.12)}
+.attacker-banner{background:#19417b;border-color:#235494;border-left-color:#ffcf3c}
+.attacker-banner.white-turn{background:#255587;border-left-color:#fff}
+.attacker-banner:not(.white-turn) .attacker-ball{background:#ffd21f}
+.attacker-banner.white-turn .attacker-ball{background:#fff}
+@media(max-width:650px){.player-card.yellow-side.current-turn,.player-card.white-side.current-turn{padding:10px 8px}}
+
+
+/* 2026-10-13: 공격 중 밝게 / 대기 어둡게 대비 강화 */
+.scoreboard{background:#96c1e8;padding:10px;border-radius:24px}
+.player-card{transition:all .18s ease}
+.player-card.waiting-turn{filter:saturate(.86) brightness(.87); opacity:1}
+.player-card.yellow-side.waiting-turn{background:#cfbf68!important;border:2px solid #b6972e!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.player-card.white-side.waiting-turn{background:#cfd8e4!important;border:2px solid #9eb1c7!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+.player-card.yellow-side.current-turn{background:#fff1a8!important;border:3px solid #f1c400!important;box-shadow:0 12px 28px rgba(204,154,0,.26)}
+.player-card.white-side.current-turn{background:#ffffff!important;border:3px solid #ffffff!important;box-shadow:0 0 0 4px rgba(39,88,144,.58),0 12px 28px rgba(26,61,108,.22)}
+.player-card.current-turn .player-name,.player-card.current-turn .statrow b{color:#102f61}
+.player-card.current-turn .target{color:#5d7ea9}
+.player-card.waiting-turn .player-name,.player-card.waiting-turn .statrow b{color:#5a6f8d}
+.player-card.waiting-turn .target,.player-card.waiting-turn .statrow{color:#6f839e}
+.player-card.waiting-turn .yellow-text{color:#bb9200!important}
+.player-card.waiting-turn .white-text{color:#4d6588!important}
+.turn-pill.wait-pill{background:#8da2bf!important;color:#f7fbff!important}
+.attacker-banner{background:#133a74;border-color:#1f4f90;border-left-color:#ffd23f;box-shadow:0 6px 18px rgba(21,58,110,.18)}
+.attacker-banner.white-turn{background:#1d4f82;border-left-color:#fff}
+
+
+/* 노란공 점수 남색 + 목표점수 살짝 확대 (2026-10-13) */
+.player-card.yellow-side .scoreline .big-score{color:#163a68!important}
+.scoreline .target{font-size:25px;font-weight:750;color:#55749d;margin-bottom:5px}
+@media(max-width:650px){.scoreline .target{font-size:20px;margin-bottom:3px}}
+
+/* 목표 점수 도달: 계속 진행 또는 경기 종료 선택 */
+.goal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(12,35,69,.63);display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(4px)}
+.goal-dialog{width:min(100%,420px);background:#f7fbff;border:2px solid #bad8f1;border-radius:26px;padding:25px 23px;box-shadow:0 25px 65px rgba(12,33,70,.32);text-align:center;color:#16315f}
+.goal-icon{width:64px;height:64px;display:grid;place-items:center;margin:0 auto 12px;border-radius:50%;background:#fff3c5;box-shadow:inset 0 0 0 2px #ebc442;font-size:35px}
+.goal-icon.white-ball{background:#fff;box-shadow:inset 0 0 0 2px #b8cce3}
+.goal-tag{display:inline-block;background:#e4f0ff;color:#285c96;padding:5px 12px;border-radius:99px;font-size:12px;font-weight:800}
+.goal-title{font-size:25px;letter-spacing:-.04em;line-height:1.25;font-weight:900;margin:12px 0 9px}
+.goal-scores{display:flex;align-items:baseline;justify-content:center;gap:5px;margin:10px 0 7px;font-weight:850;color:#183763}
+.goal-scores strong{font-size:52px;line-height:1}
+.goal-scores span{font-size:19px;color:#728da9}
+.goal-description{font-size:14px;color:#526f94;margin:9px 0 20px;line-height:1.55}
+.goal-buttons{display:grid;grid-template-columns:1fr 1.25fr;gap:9px}
+.goal-buttons button{min-height:52px;padding:12px 7px;border-radius:13px;font-size:15px;font-weight:850;cursor:pointer}
+.goal-continue{background:#e5f1ff;color:#234e7f;border:1px solid #b9d5ef}
+.goal-end{background:#ffd54b;color:#173463;border:1px solid #eab72c}
+.goal-footnote{color:#728ca8;font-size:11px;margin-top:14px}
+@media(max-width:380px){.goal-dialog{padding:20px 16px}.goal-title{font-size:22px}.goal-buttons button{font-size:13px}}
+
+
+/* 작은 휴대폰 가로 화면 전용: 점수판(왼쪽) / 점수입력(오른쪽) */
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 600px) {
+  body:has(.scoreboard) {font-size: 13px; min-height:100dvh}
+  body:has(.scoreboard) .page {max-width:none; padding:4px 10px 10px}
+  body:has(.scoreboard) header {padding:0 0 4px; min-height:34px; gap:7px}
+  body:has(.scoreboard) h1 {font-size:17px}
+  body:has(.scoreboard) .brand-ball {height:16px;width:16px}
+  body:has(.scoreboard) header .tag {padding:3px 7px;font-size:9px}
+  body:has(.scoreboard) header select.switch {width:auto;max-width:128px;padding:3px 6px;font-size:11px}
+  body:has(.scoreboard) .banner {display:none}
+  body:has(.scoreboard) .tabs {margin-bottom:5px;gap:8px}
+  body:has(.scoreboard) .tab {padding:5px 9px;font-size:11px;border-bottom-width:2px}
+  body:has(.scoreboard) .foot {display:none}
+  #view:has(.scoreboard) {display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);gap:8px;align-items:start}
+  #view:has(.scoreboard)>.card {margin:0; padding:10px;border-radius:15px;min-width:0}
+  #view:has(.scoreboard)>.card:first-child>.row {margin-bottom:4px!important}
+  #view:has(.scoreboard)>.card:first-child>.row h2 {font-size:14px}
+  #view:has(.scoreboard)>.card:first-child>.row .muted {display:none}
+  #view:has(.scoreboard)>.card:first-child>.row .pill {padding:2px 5px;font-size:9px}
+  #view:has(.scoreboard)>.card:first-child>.note {font-size:10px;padding:5px 7px;margin:5px 0}
+  #view:has(.scoreboard) .attacker-banner {min-height:37px;margin:0 0 5px;padding:4px 7px;border-left-width:5px;border-radius:10px}
+  #view:has(.scoreboard) .attacker-main {gap:7px}
+  #view:has(.scoreboard) .attacker-ball {width:21px;height:21px;border-width:1px}
+  #view:has(.scoreboard) .attacker-subtitle {display:none}
+  #view:has(.scoreboard) .attacker-name {font-size:17px;line-height:1.1}
+  #view:has(.scoreboard) .attacker-inning {font-size:10px;padding:3px 7px}
+  #view:has(.scoreboard) .scoreboard {grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:5px;gap:6px;border-radius:12px}
+  #view:has(.scoreboard) .vslabel {display:none}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn {padding:7px 7px 6px!important;border-radius:12px}
+  #view:has(.scoreboard) .player-card .name-row {gap:4px;margin-bottom:2px;flex-wrap:wrap}
+  #view:has(.scoreboard) .player-card .player-name {font-size:13px}
+  #view:has(.scoreboard) .player-dot {width:10px;height:10px;margin-right:4px}
+  #view:has(.scoreboard) .turn-pill {font-size:9px!important;padding:2px 5px;border-radius:6px}
+  #view:has(.scoreboard) .scoreline {margin:0 0 3px;gap:4px;align-items:baseline;flex-wrap:nowrap}
+  #view:has(.scoreboard) .scoreline .big-score {font-size:clamp(30px,5.5vw,47px);line-height:1.03}
+  #view:has(.scoreboard) .scoreline .target {font-size:19px;margin-bottom:0;white-space:nowrap}
+  #view:has(.scoreboard) .statrow {gap:2px 9px;padding-top:4px;font-size:10px;flex-wrap:wrap}
+  #view:has(.scoreboard) .turn-header {display:flex;flex-direction:row;align-items:center;gap:7px;margin-bottom:3px}
+  #view:has(.scoreboard) .turn-header h2 {font-size:15px;margin:0!important;white-space:nowrap}
+  #view:has(.scoreboard) .turn-header .muted {display:none}
+  #view:has(.scoreboard) .turn-header .total-box {margin:0 0 0 auto;align-self:auto;gap:5px}
+  #view:has(.scoreboard) .turn-header .total-badge {font-size:10px;padding:3px 6px}
+  #view:has(.scoreboard) .turn-header .turn-points {font-size:24px}
+  #view:has(.scoreboard) .control-buttons {gap:7px;margin-top:9px}
+  #view:has(.scoreboard) .score-btn {height:78px;min-height:78px;font-size:32px;padding:7px 3px;border-radius:13px}
+  #view:has(.scoreboard) .score-btn .score-sub {font-size:10px;margin-top:5px}
+  #view:has(.scoreboard) .control-buttons + .grid2 {display:grid;grid-template-columns:1fr 1fr!important;gap:6px;margin-top:8px!important}
+  #view:has(.scoreboard) .control-buttons + .grid2 button {padding:7px 3px!important;font-size:11px;border-radius:9px;min-height:35px}
+  #view:has(.scoreboard)>.compact-record {grid-column:1/-1;padding:8px 11px;}
+  #view:has(.scoreboard)>.compact-record .row {margin:0 0 3px!important}
+  #view:has(.scoreboard)>.compact-record h3 {font-size:12px}
+  #view:has(.scoreboard)>.compact-record .inning-scroll {max-height:106px}
+  #view:has(.scoreboard)>.compact-record .inning-table th,
+  #view:has(.scoreboard)>.compact-record .inning-table td {height:28px;padding:3px 5px;font-size:11px}
+  #view:has(.scoreboard) .goal-dialog {width:min(420px,92vw);max-height:calc(100dvh - 16px);overflow-y:auto;padding:9px 18px;border-radius:16px}
+  #view:has(.scoreboard) .goal-icon {height:28px;width:28px;font-size:19px;margin-bottom:4px}
+  #view:has(.scoreboard) .goal-tag {font-size:10px;padding:3px 7px}
+  #view:has(.scoreboard) .goal-title {font-size:18px;margin:5px 0}
+  #view:has(.scoreboard) .goal-scores {margin:4px 0}
+  #view:has(.scoreboard) .goal-scores strong {font-size:31px}
+  #view:has(.scoreboard) .goal-description {font-size:11px;margin:4px 0 10px}
+  #view:has(.scoreboard) .goal-buttons button {min-height:39px;padding:6px;font-size:12px}
+  #view:has(.scoreboard) .goal-footnote {margin-top:5px;font-size:10px}
+}
+
+/* 휴대폰 가로 모드: 큰 득점 버튼을 세로로 배열. 좌측 점수/기록, 우측 입력 */
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 600px) {
+  #view:has(.scoreboard){
+    display:grid;
+    grid-template-columns:minmax(0,1.23fr) minmax(0,.77fr);
+    grid-template-rows:auto auto;
+    gap:6px 9px;
+    align-items:start;
+  }
+  #view:has(.scoreboard)>.card:first-child {grid-column:1;grid-row:1}
+  #view:has(.scoreboard)>.card:nth-child(2){grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;padding:8px 10px 10px;min-height:0}
+  #view:has(.scoreboard)>.compact-record{grid-column:1;grid-row:2;padding:6px 10px}
+  #view:has(.scoreboard) .control-buttons {display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(0,1fr));gap:6px;margin-top:8px;flex:1;min-height:0}
+  #view:has(.scoreboard) .score-btn {width:100%;min-height:51px;height:clamp(51px,14dvh,69px);padding:3px 8px;font-size:30px;border-radius:13px;flex-direction:row;gap:12px}
+  #view:has(.scoreboard) .btn-zero {border-width:3px;outline:1px solid rgba(44,94,156,.25)}
+  #view:has(.scoreboard) .score-btn .score-sub {font-size:12px;margin:0;font-weight:850;line-height:1.25}
+  #view:has(.scoreboard) .control-buttons + .grid2 {margin-top:6px!important;gap:6px}
+  #view:has(.scoreboard) .control-buttons + .grid2 button{min-height:29px;padding:4px 2px!important;font-size:10px}
+  #view:has(.scoreboard) .inning-scroll{max-height:108px}
+  #view:has(.scoreboard)>.card:first-child {padding:7px 9px}
+  #view:has(.scoreboard) .attacker-banner {min-height:32px}
+  #view:has(.scoreboard) .scoreboard {padding:4px}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn {padding:5px 7px!important}
+  #view:has(.scoreboard) .scoreline .big-score {font-size:clamp(30px,5.2vw,43px)}
+  #view:has(.scoreboard) .scoreline .target {font-size:19px}
+  #view:has(.scoreboard) .turn-header {margin-bottom:0}
+  #view:has(.scoreboard) .turn-header .turn-points {font-size:26px}
+}
+@media (orientation:landscape) and (max-height:370px) and (min-width:600px){
+  body:has(.scoreboard) header {min-height:26px}
+  #view:has(.scoreboard) .score-btn {min-height:44px;height:clamp(44px,13dvh,52px);font-size:27px}
+  #view:has(.scoreboard) .control-buttons{gap:4px;margin-top:5px}
+  #view:has(.scoreboard) .control-buttons + .grid2 button{min-height:26px}
+  #view:has(.scoreboard) .player-card .statrow{font-size:9px}
+}
+
+
+/* 가로 화면 높이 최적화: 버튼이 잘리지 않도록 공간 확보 */
+@media (orientation: landscape) and (max-height:600px) and (min-width:600px){
+ #view:has(.scoreboard) .score-btn{height:clamp(45px,12dvh,58px);min-height:45px;font-size:29px}
+ #view:has(.scoreboard) .control-buttons{gap:5px;margin-top:6px}
+ #view:has(.scoreboard) .control-buttons + .grid2{margin-top:5px!important}
+ body:has(.scoreboard) .success,body:has(.scoreboard) .alert{position:fixed;top:6px;left:50%;transform:translateX(-50%);margin:0;max-width:80vw;width:max-content;z-index:60;box-shadow:0 4px 12px #2451882b;padding:7px 11px;font-size:11px}
+}
+@media (orientation:landscape) and (max-height:370px) and (min-width:600px){
+ #view:has(.scoreboard) .score-btn{height:43px;min-height:43px;font-size:26px}
+ #view:has(.scoreboard) .control-buttons{gap:3px;margin-top:4px}
+}
+
+
+/* 가로모드: 점수 입력 세로 버튼은 유지하고 오른쪽 폭만 27% 수준으로 축소 */
+@media (orientation:landscape) and (max-height:600px) and (min-width:600px){
+  #view:has(.scoreboard){grid-template-columns:minmax(0,2.65fr) minmax(200px,1fr);column-gap:8px}
+  #view:has(.scoreboard)>.card:nth-child(2){padding:8px 8px 9px}
+  #view:has(.scoreboard) .turn-header{gap:3px}
+  #view:has(.scoreboard) .turn-header h2{font-size:14px}
+  #view:has(.scoreboard) .turn-header .total-box{gap:3px}
+  #view:has(.scoreboard) .turn-header .total-badge{font-size:9px;padding:3px 5px}
+  #view:has(.scoreboard) .turn-header .turn-points{font-size:24px}
+  #view:has(.scoreboard) .control-buttons{gap:5px}
+  #view:has(.scoreboard) .score-btn{font-size:29px;min-height:45px;letter-spacing:0}
+  #view:has(.scoreboard) .btn-zero{gap:6px}
+  #view:has(.scoreboard) .btn-zero .score-sub{font-size:11px}
+  #view:has(.scoreboard) .control-buttons + .grid2 button{font-size:10px}
+}
+
+/* 가로모드 3이닝 고정: 이닝 수에 따라 카드 높이가 변하지 않으며 입력판은 전체 높이에 정렬 */
+@media (orientation: landscape) and (max-height:600px) and (min-width:600px){
+  #view:has(.scoreboard){
+    --fixed-record-scroll:clamp(80px,22dvh,91px);
+    grid-template-columns:minmax(0,2.65fr) minmax(200px,1fr);
+    grid-template-rows:clamp(157px,43dvh,177px) clamp(111px,31dvh,128px);
+    gap:6px 8px;
+    align-items:stretch;
+  }
+  #view:has(.scoreboard)>.card:first-child{
+    grid-column:1;grid-row:1;
+    min-height:0;height:100%;overflow:hidden;
+    padding:6px 9px;
+  }
+  #view:has(.scoreboard)>.card:first-child>.row{margin-bottom:2px!important;min-height:17px}
+  #view:has(.scoreboard) .attacker-banner{min-height:29px;height:29px;margin-bottom:4px;padding:3px 7px}
+  #view:has(.scoreboard) .attacker-name{font-size:16px}
+  #view:has(.scoreboard) .attacker-ball{width:19px;height:19px}
+  #view:has(.scoreboard) .scoreboard{padding:4px;gap:6px}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{padding:4px 7px!important;min-height:0}
+  #view:has(.scoreboard) .player-card .name-row{margin-bottom:0}
+  #view:has(.scoreboard) .scoreline{margin:0;line-height:1}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:clamp(30px,4.6vw,39px);line-height:1.03}
+  #view:has(.scoreboard) .scoreline .target{font-size:19px}
+  #view:has(.scoreboard) .statrow{padding-top:3px;font-size:9px;gap:2px 7px}
+  #view:has(.scoreboard)>.compact-record{
+    grid-column:1;grid-row:2;
+    min-height:0;height:100%;overflow:hidden;
+    padding:6px 10px;
+    display:flex;flex-direction:column;
+  }
+  #view:has(.scoreboard)>.compact-record>.row{
+    height:20px;min-height:20px;
+    flex:0 0 20px;
+    margin:0 0 3px!important;
+  }
+  #view:has(.scoreboard)>.compact-record .inning-scroll{
+    height:var(--fixed-record-scroll);
+    min-height:0;max-height:none;
+    flex:0 0 var(--fixed-record-scroll);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  #view:has(.scoreboard)>.compact-record .inning-table th{height:25px;padding:2px 5px;font-size:10px}
+  #view:has(.scoreboard)>.compact-record .inning-table td{height:22px;padding:2px 5px;font-size:10px}
+  #view:has(.scoreboard)>.card:nth-child(2){
+    grid-column:2;grid-row:1 / span 2;
+    height:100%;min-height:0;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    padding:8px;
+  }
+  #view:has(.scoreboard) .control-buttons{
+    display:grid;grid-template-columns:1fr;
+    grid-template-rows:repeat(4,minmax(0,1fr));
+    gap:5px;
+    margin-top:6px;
+    flex:1 1 0;
+    min-height:0;
+  }
+  #view:has(.scoreboard) .score-btn{
+    width:100%;height:100%;min-height:0;
+    font-size:29px;padding:3px 8px;
+    border-radius:13px;
+    flex-direction:row;gap:6px;
+  }
+  #view:has(.scoreboard) .control-buttons + .grid2{flex:0 0 auto;margin-top:6px!important}
+  #view:has(.scoreboard) .control-buttons + .grid2 button{min-height:29px;padding:4px 2px!important;font-size:10px}
+}
+@media (orientation:landscape) and (max-height:390px) and (min-width:600px){
+  #view:has(.scoreboard)>.compact-record>.row{height:18px;min-height:18px;flex-basis:18px;margin-bottom:2px!important}
+  #view:has(.scoreboard)>.compact-record .inning-table th{height:20px;padding:1px 5px}
+  #view:has(.scoreboard)>.compact-record .inning-table td{height:20px;padding:1px 5px}
+  #view:has(.scoreboard) .score-btn{font-size:25px}
+}
+
+
+/* 가로 집중 화면 2026-10-13: 득점 버튼의 실제 터치 크기를 먼저 확보 */
+.focus-menu-btn{display:none}
+@media (orientation:landscape) and (min-width:600px) and (max-height:500px){
+  body:has(#view .scoreboard){overflow:hidden}
+  body:has(#view .scoreboard) .page{max-width:none;padding:3px 8px 3px}
+  body:has(#view .scoreboard) header{padding:0 1px;min-height:30px;height:30px;margin:0 0 5px;gap:6px}
+  body:has(#view .scoreboard) .brand-title{gap:5px}
+  body:has(#view .scoreboard) .brand-ball{width:15px;height:15px;margin-right:-5px;border-width:1px}
+  body:has(#view .scoreboard) h1{font-size:15px}
+  body:has(#view .scoreboard) header .tag{display:none}
+  body:has(#view .scoreboard) header .flex{gap:7px;flex-wrap:nowrap}
+  body:has(#view .scoreboard) .switch{width:100px;max-width:110px;padding:4px 5px;border-radius:8px;font-size:11px;line-height:1.1}
+  body:has(#view .scoreboard) .focus-menu-btn{display:inline-flex;align-items:center;justify-content:center;min-height:27px;padding:3px 9px;border:1px solid #93b8df;background:#e5f2ff;color:#173a68;font-size:11px;font-weight:850;border-radius:9px;white-space:nowrap}
+  body:has(#view .scoreboard) #tabs{display:none!important}
+  body.focus-menu-open:has(#view .scoreboard) #tabs{display:flex!important;position:fixed;z-index:80;top:37px;right:7px;width:max-content;max-width:94vw;box-shadow:0 8px 24px #204a7980;background:#eff7ff;border:1px solid #a7c6e7;border-radius:12px;padding:5px;gap:3px;overflow-x:auto;margin:0}
+  body.focus-menu-open:has(#view .scoreboard) #tabs .tab{padding:7px 9px;font-size:11px}
+  body:has(#view .scoreboard) .banner,body:has(#view .scoreboard) .foot{display:none}
+  #view:has(.scoreboard){
+    height:calc(100dvh - 41px);
+    max-height:calc(100dvh - 41px);
+    min-height:0;
+    display:grid;
+    grid-template-columns:minmax(0,1.94fr) minmax(240px,1fr);
+    grid-template-rows:minmax(150px,1.7fr) minmax(116px,1fr);
+    gap:7px 9px;
+    align-items:stretch;
+  }
+  #view:has(.scoreboard)>.card:first-child{grid-column:1;grid-row:1;overflow:hidden;height:100%;min-height:0;padding:8px 10px;margin:0}
+  #view:has(.scoreboard)>.card:first-child>.row{min-height:20px}
+  #view:has(.scoreboard)>.card:first-child h2{font-size:15px}
+  #view:has(.scoreboard) .attacker-banner{height:32px;min-height:32px;margin:5px 0;padding:3px 9px}
+  #view:has(.scoreboard) .attacker-name{font-size:18px}
+  #view:has(.scoreboard) .attacker-ball{width:20px;height:20px}
+  #view:has(.scoreboard) .scoreboard{padding:6px;gap:8px}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{padding:8px 10px!important;min-width:0}
+  #view:has(.scoreboard) .player-card .name-row{margin-bottom:4px}
+  #view:has(.scoreboard) .player-card .player-name{font-size:14px}
+  #view:has(.scoreboard) .scoreline{margin:2px 0 4px}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:clamp(43px,5.8vw,54px)}
+  #view:has(.scoreboard) .scoreline .target{font-size:23px;margin-bottom:4px}
+  #view:has(.scoreboard) .statrow{font-size:10px;gap:5px 10px;padding-top:4px;flex-wrap:wrap}
+  #view:has(.scoreboard)>.compact-record{grid-column:1;grid-row:2;margin:0;min-height:0;height:100%;padding:8px 10px;display:flex;flex-direction:column;overflow:hidden}
+  #view:has(.scoreboard)>.compact-record>.row{height:20px;min-height:20px;flex:0 0 20px;margin-bottom:3px!important}
+  #view:has(.scoreboard)>.compact-record .inning-scroll{height:93px;max-height:none;min-height:0;flex:0 0 93px;overflow-y:auto}
+  #view:has(.scoreboard)>.compact-record .inning-table th{height:25px;padding:2px 5px;font-size:10px}
+  #view:has(.scoreboard)>.compact-record .inning-table td{height:22px;padding:2px 5px;font-size:10px}
+  #view:has(.scoreboard)>.card:nth-child(2){grid-column:2;grid-row:1/span 2;margin:0;padding:10px;min-height:0;height:100%;display:flex;flex-direction:column;overflow:hidden}
+  #view:has(.scoreboard) .turn-header{margin-bottom:0;gap:4px;align-items:center}
+  #view:has(.scoreboard) .turn-header h2{font-size:16px!important;margin:0!important}
+  #view:has(.scoreboard) .turn-header .total-box{gap:4px}
+  #view:has(.scoreboard) .turn-header .total-badge{font-size:10px;padding:4px 5px}
+  #view:has(.scoreboard) .turn-header .turn-points{font-size:30px}
+  #view:has(.scoreboard) .turn-header .muted{display:none}
+  #view:has(.scoreboard) .control-buttons{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(0,1fr));flex:1 1 0;min-height:0;gap:7px;margin-top:8px}
+  #view:has(.scoreboard) .score-btn{height:100%;min-height:0;width:100%;font-size:37px;border-radius:16px;flex-direction:row;gap:8px;padding:3px 6px}
+  #view:has(.scoreboard) .btn-zero{border-width:3px}
+  #view:has(.scoreboard) .btn-zero .score-sub{font-size:13px;margin:0;line-height:1.2}
+  #view:has(.scoreboard) .control-buttons+.grid2{flex:0 0 auto;margin-top:7px!important;gap:5px}
+  #view:has(.scoreboard) .control-buttons+.grid2 button{min-height:32px;padding:4px 2px!important;font-size:11px}
+}
+@media (orientation:landscape) and (min-width:600px) and (max-height:365px){
+  #view:has(.scoreboard){grid-template-columns:minmax(0,1.84fr) minmax(230px,1fr);grid-template-rows:minmax(143px,1.5fr) minmax(111px,1fr)}
+  #view:has(.scoreboard) .player-card .player-name{font-size:12px}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:38px}
+  #view:has(.scoreboard) .score-btn{font-size:33px}
+  #view:has(.scoreboard) .control-buttons{gap:5px}
+  #view:has(.scoreboard) .control-buttons+.grid2 button{min-height:27px;font-size:10px}
+  #view:has(.scoreboard)>.compact-record .inning-scroll{height:86px;flex-basis:86px}
+  #view:has(.scoreboard)>.compact-record .inning-table th{height:22px}
+  #view:has(.scoreboard)>.compact-record .inning-table td{height:21px}
+}
+
+@media (orientation:landscape) and (min-width:600px) and (max-height:350px){
+  #view:has(.scoreboard)>.card:first-child{padding:5px 8px}
+  #view:has(.scoreboard) .attacker-banner{height:27px;min-height:27px;padding:2px 7px;margin:3px 0}
+  #view:has(.scoreboard) .attacker-name{font-size:16px}
+  #view:has(.scoreboard) .scoreboard{padding:3px;gap:6px}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{padding:4px 7px!important}
+  #view:has(.scoreboard) .player-card .name-row{margin:0}
+  #view:has(.scoreboard) .scoreline{margin:0}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:35px}
+  #view:has(.scoreboard) .scoreline .target{font-size:19px;margin-bottom:1px}
+  #view:has(.scoreboard) .statrow{font-size:9px;padding-top:2px}
+}
+
+/* 2026-10-13: 가로모드에서 최근 득점기록을 아래로 이동 */
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 600px) {
+  #view:has(.scoreboard){
+    display:grid !important;
+    grid-template-columns:minmax(0,1.32fr) minmax(250px,.68fr) !important;
+    gap:9px !important;
+    align-items:start !important;
+  }
+  #view:has(.scoreboard) > .card:first-child{
+    grid-column:1;
+    grid-row:1;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2){
+    grid-column:2;
+    grid-row:1;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  #view:has(.scoreboard) > .compact-record{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+    width:100%;
+    margin-top:0 !important;
+  }
+  #view:has(.scoreboard) > .compact-record .inning-scroll{
+    max-height:124px !important;
+    min-height:124px !important;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .turn-header{
+    margin-bottom:8px !important;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .control-buttons{
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+    margin-top:10px !important;
+    flex:1;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .score-btn{
+    min-height:68px !important;
+    font-size:34px !important;
+    border-radius:18px !important;
+    padding:12px 8px !important;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .score-btn .score-sub{
+    font-size:12px !important;
+    margin-top:6px !important;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .grid2{
+    margin-top:10px !important;
+    gap:8px !important;
+  }
+  #view:has(.scoreboard) > .card:nth-child(2) .grid2 .ghost{
+    padding:12px 8px !important;
+    font-size:12px !important;
+    border-radius:12px !important;
+  }
+}
+
+
+/* 가로모드: 첫 화면은 점수판과 큰 득점 버튼에 전용, 기록은 다음 스크롤 화면 */
+@media (orientation:landscape) and (max-height:600px) and (min-width:600px) {
+  body:has(#view .scoreboard){overflow-y:auto!important;overflow-x:hidden!important}
+  #view:has(.scoreboard){
+    height:auto!important;max-height:none!important;min-height:0!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1.32fr) minmax(250px,.68fr)!important;
+    grid-template-rows:minmax(calc(100dvh - 41px), max-content) auto!important;
+    column-gap:9px!important;row-gap:0!important;align-items:stretch!important;
+  }
+  #view:has(.scoreboard)>.card:first-child{
+    grid-column:1!important;grid-row:1!important;
+    height:auto!important;min-height:0!important;align-self:start!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2){
+    grid-column:2!important;grid-row:1!important;
+    height:100%!important;min-height:0!important;align-self:stretch!important;
+    display:flex!important;flex-direction:column!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .control-buttons{
+    display:grid!important;grid-template-columns:1fr!important;
+    grid-template-rows:repeat(4,minmax(0,1fr))!important;
+    gap:8px!important;margin-top:7px!important;flex:1 1 0!important;min-height:0!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .score-btn{
+    min-height:0!important;height:100%!important;font-size:37px!important;
+    border-radius:15px!important;flex-direction:row!important;padding:4px 8px!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .score-btn .score-sub{margin:0!important;font-size:12px!important}
+  #view:has(.scoreboard)>.compact-record{
+    grid-column:1 / -1!important;grid-row:2!important;
+    align-self:start!important;height:auto!important;min-height:0!important;
+    overflow:visible!important;margin:12px 0 24px!important;
+  }
+  #view:has(.scoreboard)>.compact-record .inning-scroll{
+    height:96px!important;min-height:96px!important;max-height:96px!important;
+    flex:0 0 96px!important;overflow-y:auto!important;
+  }
+}
+
+
+/* 2026-10-13: 가로모드 점수판 확대 */
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 600px) {
+  #view:has(.scoreboard){grid-template-columns:minmax(0,1.42fr) minmax(238px,.58fr) !important; gap:10px !important;}
+  #view:has(.scoreboard) > .card:first-child{padding:12px !important; border-radius:16px !important;}
+  #view:has(.scoreboard) > .card:first-child > .row{margin-bottom:6px !important;}
+  #view:has(.scoreboard) > .card:first-child > .row h2{font-size:16px !important;}
+  #view:has(.scoreboard) .attacker-banner{min-height:46px !important; padding:7px 10px !important; margin:0 0 8px !important; border-radius:12px !important;}
+  #view:has(.scoreboard) .attacker-ball{width:24px !important; height:24px !important;}
+  #view:has(.scoreboard) .attacker-name{font-size:20px !important;}
+  #view:has(.scoreboard) .attacker-inning{font-size:11px !important; padding:4px 8px !important;}
+  #view:has(.scoreboard) .scoreboard{padding:7px !important; gap:8px !important; border-radius:14px !important;}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{padding:10px 10px 8px !important; border-radius:14px !important;}
+  #view:has(.scoreboard) .player-card .name-row{gap:5px !important; margin-bottom:4px !important;}
+  #view:has(.scoreboard) .player-card .player-name{font-size:15px !important;}
+  #view:has(.scoreboard) .player-dot{width:11px !important; height:11px !important; margin-right:4px !important;}
+  #view:has(.scoreboard) .turn-pill{font-size:10px !important; padding:5px 8px !important;}
+  #view:has(.scoreboard) .scoreline{margin:6px 0 10px !important; gap:6px !important;}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:60px !important;}
+  #view:has(.scoreboard) .scoreline .target{font-size:18px !important; margin-bottom:7px !important;}
+  #view:has(.scoreboard) .statrow{font-size:12px !important; gap:14px !important; padding-top:9px !important;}
+}
+
+
+/* FIX: 가로모드 좌우 상단 패널 높이와 스크롤 복귀 정렬 - 마지막 규칙 우선 */
+@media (orientation:landscape) and (max-height:600px) and (min-width:600px){
+  body:has(.scoreboard) {overflow-y:auto!important; overflow-x:hidden!important}
+  #view:has(.scoreboard){
+    display:grid!important;
+    grid-template-columns:minmax(0,1.38fr) minmax(238px,.62fr)!important;
+    grid-template-rows:minmax(calc(100dvh - 48px), max-content) auto!important;
+    gap:0 10px!important;
+    align-items:stretch!important;
+    min-height:0!important;
+    height:auto!important;
+  }
+  #view:has(.scoreboard)>.card:first-child,
+  #view:has(.scoreboard)>.card:nth-child(2){
+    grid-row:1!important;
+    height:100%!important;
+    min-height:0!important;
+    align-self:stretch!important;
+    box-sizing:border-box;
+    overflow:visible!important;
+    border-radius:16px!important;
+    margin:0!important;
+  }
+  #view:has(.scoreboard)>.card:first-child{
+    grid-column:1!important;
+    padding:10px 12px!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  #view:has(.scoreboard)>.card:first-child>.row {flex:0 0 auto}
+  #view:has(.scoreboard) .attacker-banner{flex:0 0 auto}
+  #view:has(.scoreboard) .scoreboard{
+    flex:1 1 auto!important;
+    min-height:0;
+    display:grid;
+    align-items:stretch;
+  }
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    min-height:0;
+  }
+  #view:has(.scoreboard) .player-card .statrow{margin-top:4px!important}
+  #view:has(.scoreboard)>.card:nth-child(2){
+    grid-column:2!important;
+    padding:10px!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .turn-header{flex:0 0 auto}
+  #view:has(.scoreboard)>.card:nth-child(2) .control-buttons{
+    display:grid!important;
+    flex:1 1 auto!important;
+    grid-template-columns:1fr!important;
+    grid-template-rows:repeat(4,minmax(0,1fr))!important;
+    margin-top:8px!important;
+    gap:7px!important;
+    min-height:0!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .score-btn{
+    height:100%!important;
+    min-height:0!important;
+    font-size:clamp(27px,3.9vw,36px)!important;
+    padding:4px 6px!important;
+  }
+  #view:has(.scoreboard)>.card:nth-child(2) .control-buttons+.grid2{flex:0 0 auto;margin-top:7px!important}
+  #view:has(.scoreboard)>.compact-record{
+    grid-column:1/-1!important;
+    grid-row:2!important;
+    height:auto!important;
+    margin:14px 0 22px!important;
+    align-self:start!important;
+    overflow:visible!important;
+  }
+}
+
+
+@media (orientation:landscape) and (min-width:600px) and (max-height:380px){
+  #view:has(.scoreboard)>.card:first-child{padding:6px 8px!important}
+  #view:has(.scoreboard)>.card:nth-child(2){padding:7px 8px!important}
+  #view:has(.scoreboard) .attacker-banner{min-height:32px!important;padding:3px 7px!important;margin:0 0 5px!important}
+  #view:has(.scoreboard) .attacker-name{font-size:17px!important}
+  #view:has(.scoreboard) .scoreboard{padding:4px!important;gap:6px!important}
+  #view:has(.scoreboard) .player-card,
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.white-turn{padding:5px 6px!important}
+  #view:has(.scoreboard) .scoreline{margin:2px 0 4px!important}
+  #view:has(.scoreboard) .scoreline .big-score{font-size:46px!important}
+  #view:has(.scoreboard) .scoreline .target{font-size:17px!important;margin-bottom:4px!important}
+  #view:has(.scoreboard) .statrow{font-size:10px!important;padding-top:4px!important;gap:3px 7px!important}
+  #view:has(.scoreboard) .control-buttons{gap:4px!important;margin-top:5px!important}
+  #view:has(.scoreboard) .score-btn{font-size:30px!important}
+  #view:has(.scoreboard) .turn-header .turn-points{font-size:23px!important}
+  #view:has(.scoreboard) .control-buttons+.grid2{margin-top:5px!important}
+  #view:has(.scoreboard) .control-buttons+.grid2 button{min-height:26px!important;padding:3px 2px!important;font-size:9px!important}
+}
+
+
+/* 2026-10-13: 공격 중 카드 테두리 정리 + 입체감 강화 */
+.player-card.current-turn,
+.player-card.current-turn.white-turn,
+.player-card.yellow-side.current-turn,
+.player-card.white-side.current-turn{
+  transform:translateY(-2px);
+  border:1px solid rgba(255,255,255,.55) !important;
+}
+.player-card.yellow-side.current-turn{
+  background:linear-gradient(180deg,#ffe884 0%, #f3cf45 100%) !important;
+  box-shadow:
+    0 14px 26px rgba(201,151,0,.18),
+    0 4px 10px rgba(255,255,255,.55) inset,
+    0 -2px 0 rgba(205,156,0,.16) inset !important;
+}
+.player-card.white-side.current-turn,
+.player-card.current-turn.white-turn{
+  background:linear-gradient(180deg,#ffffff 0%, #edf6ff 100%) !important;
+  box-shadow:
+    0 14px 26px rgba(50,92,150,.16),
+    0 4px 10px rgba(255,255,255,.70) inset,
+    0 -2px 0 rgba(121,162,210,.10) inset !important;
+}
+.player-card.waiting-turn{
+  box-shadow:none !important;
+}
+.turn-pill{
+  box-shadow:0 4px 10px rgba(17,52,99,.12);
+}
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 600px) {
+  #view:has(.scoreboard) .player-card.current-turn,
+  #view:has(.scoreboard) .player-card.current-turn.white-turn,
+  #view:has(.scoreboard) .player-card.yellow-side.current-turn,
+  #view:has(.scoreboard) .player-card.white-side.current-turn{
+    transform:translateY(-1px);
+  }
+}
+
+
+/* 내 기록: 월별 성적과 해당 월까지 누적 성적 */
+.month-panel{padding-bottom:16px}
+.month-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.month-top h2{margin:0}
+.month-picker{display:flex;gap:7px;align-items:center;font-size:12px;font-weight:750;color:var(--muted);white-space:nowrap}
+.month-picker select{min-width:112px;border:1px solid #bdd9f1;background:#f2f9ff;color:var(--ink);border-radius:12px;padding:8px 10px;font-weight:800;font-size:13px}
+.month-description{margin:4px 0 13px;font-size:12px;color:var(--muted)}
+.month-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:11px}
+.month-mini{min-width:0;border-radius:15px;padding:13px 13px 11px;background:linear-gradient(165deg,#e7f3ff,#f4faff);border:1px solid #d1e6f8}
+.month-mini.month-accum{background:linear-gradient(155deg,#fff3bb,#fff9e4);border-color:#f4e4aa}
+.month-mini-label{font-size:13px;font-weight:900;color:#174279;display:flex;gap:6px;align-items:center}
+.month-mini-label .month-dot{width:8px;height:8px;border-radius:50%;background:#66abeb;flex:none}
+.month-accum .month-dot{background:#dca929}
+.month-mini .month-primary{margin:6px 0;font-weight:900;color:#173c74;font-size:23px;letter-spacing:-.03em}
+.month-mini .month-primary small{font-size:12px;font-weight:650;color:#55749a;margin-left:4px}
+.month-kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 6px;margin-top:9px;padding-top:9px;border-top:1px solid #a5c1e142}
+.month-kpis span{display:block;color:#627b99;font-size:11px}
+.month-kpis b{display:block;color:#183e73;font-size:16px;white-space:nowrap}
+.month-history-title{font-size:13px;font-weight:850;margin:13px 0 5px;color:#264b7a}
+.month-table-wrap{overflow:auto;border-radius:12px;border:1px solid #d2e3f3;max-height:275px}
+.month-table{min-width:630px;width:100%;font-size:12px}
+.month-table th,.month-table td{padding:10px 8px;font-size:12px;text-align:center}
+.month-table th{position:sticky;top:0;background:#e7f2fc;color:#456c99;z-index:1}
+.month-table th:first-child,.month-table td:first-child{text-align:left}
+.month-table tr.month-selected{background:#fff6d8}
+.month-table .month-link{font:inherit;color:#15589e;font-weight:850;border:0;background:none;padding:2px 3px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.month-table .month-total{font-weight:850;color:#204775}
+.month-help{font-size:11px;color:#6985a7;margin-top:7px}
+@media(max-width:500px){
+ .month-top{align-items:flex-start}
+ .month-picker{font-size:11px}
+ .month-picker select{min-width:97px;padding:7px 6px;font-size:12px}
+ .month-mini{padding:10px 9px}
+ .month-mini .month-primary{font-size:21px}
+ .month-mini .month-primary small{font-size:11px}
+ .month-kpis{gap:7px 3px}
+ .month-kpis b{font-size:14px}
+ .month-kpis span{font-size:10px}
+}
+@media(max-width:360px){.month-panels{grid-template-columns:1fr}.month-mini .month-primary{font-size:24px}}
+
+
+/* K2 PIN first-run / auto-login demo */
+[hidden]{display:none!important}
+body.auth-view{overflow:auto!important; min-height:100dvh!important}
+.auth-screen{min-height:100dvh;padding:clamp(18px,5vw,35px) 16px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 20% 12%,#d8edff 0%,transparent 35%),linear-gradient(160deg,#a9d5f9,#81b8ea)}
+.auth-card{width:min(100%,440px);background:#f6fbff;border:1px solid rgba(255,255,255,.82);border-radius:26px;box-shadow:0 22px 55px rgba(21,65,116,.20);padding:clamp(20px,5vw,31px);color:#123668}
+.auth-logo{display:flex;align-items:center;gap:11px;font-size:23px;font-weight:900;letter-spacing:-.04em}
+.auth-ball-set{display:flex;align-items:center;padding-left:5px}
+.auth-ball-set i{display:block;width:21px;height:21px;border-radius:50%;border:2px solid white;margin-left:-5px;box-shadow:0 2px 4px #28476a3b}
+.auth-ball-set i:nth-child(1){background:#ffd12c}.auth-ball-set i:nth-child(2){background:#f56578}.auth-ball-set i:nth-child(3){background:#fff}
+.auth-intro{margin:9px 0 24px;color:#6780a1;font-size:13px;line-height:1.7}
+.auth-step{display:inline-block;font-size:11px;font-weight:850;color:#996c00;background:#fff1b6;padding:5px 10px;border-radius:40px;margin-bottom:8px}
+.auth-card h2{font-size:22px;margin:0 0 4px;letter-spacing:-.04em}.auth-card .auth-desc{font-size:12px;line-height:1.7;color:#6581a2;margin-bottom:17px}
+.auth-field{display:flex;flex-direction:column;gap:7px;margin:14px 0;font-size:13px;font-weight:800}
+.auth-field select,.auth-field input{width:100%;background:#fff;border:1px solid #bbd2eb;border-radius:13px;padding:14px 13px;min-height:51px;color:#143a6a;font:inherit;font-size:17px;outline-offset:3px}
+.auth-field input{letter-spacing:.33em;font-weight:800;font-variant-numeric:tabular-nums}
+.auth-field select{font-size:15px;font-weight:650;letter-spacing:normal}
+.auth-field input:focus,.auth-field select:focus{outline:2px solid #d5ad26;border-color:#e9c63c}
+.auth-primary{width:100%;border:0;border-radius:14px;min-height:52px;margin-top:13px;background:linear-gradient(180deg,#ffe56e,#f4c837);color:#1a3d70;font-size:16px;font-weight:900;box-shadow:0 7px 17px #dca71d36}
+.auth-note{font-size:11px;color:#6c83a0;line-height:1.65;background:#eaf4ff;padding:11px;border-radius:12px;margin-top:20px}
+.auth-error{color:#b8324f;font-size:12px;font-weight:700;margin-top:9px;min-height:18px}
+.auth-avatar{background:linear-gradient(150deg,#fff3bd,#ffe27d);border-radius:15px;padding:12px;margin:14px 0;color:#896100;font-size:13px;font-weight:800}
+.auth-account{max-width:160px;border:1px solid #a5c6e7;border-radius:10px;padding:7px 11px;background:#e2f1ff;font-weight:850;color:#143968;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:450px){.auth-card{padding:20px}.auth-logo{font-size:21px}}
+@media(orientation:landscape) and (max-height:450px){.auth-screen{align-items:flex-start;padding:10px 14px}.auth-card{max-width:650px;padding:15px 20px}.auth-logo{font-size:18px}.auth-intro{margin:2px 0 10px}.auth-note{margin-top:10px}}
+
+
+/* K2: password-free onboarding and passkey design (local preview only) */
+.auth-card{width:min(100%,468px)}
+.auth-field input{letter-spacing:normal;font-weight:650;font-variant-numeric:normal}
+.auth-choice{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.auth-mini-btn{border:0;background:none;padding:7px 0;color:#205c9e;font-size:13px;font-weight:800;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.auth-new-fields{background:#eaf4ff;border:1px solid #d2e4f4;border-radius:15px;padding:6px 12px 8px;margin-top:12px}
+.auth-new-fields .auth-field{margin:9px 0}
+.auth-mode-note{background:#fff6d7;color:#7c620b;border-radius:12px;padding:12px;margin-top:13px;font-size:12px;line-height:1.6;font-weight:650}
+.auth-device-line{display:flex;align-items:center;gap:9px;border-radius:12px;background:#e9f2ff;padding:11px 12px;color:#3c6392;font-size:12px;margin:13px 0 0}
+.auth-device-line .auth-fingerprint{font-size:21px}
+.auth-bio-btn{border:1px solid #a8c7e7;border-radius:9px;background:#e5f2ff;padding:7px 10px;color:#235180;font-weight:800;font-size:11px;cursor:pointer}
+.auth-info-overlay{position:fixed;inset:0;background:#12365b99;display:grid;place-items:center;z-index:10000;padding:16px}
+.auth-info-box{background:white;border-radius:21px;width:min(100%,410px);padding:24px;box-shadow:0 18px 48px #12345b45;color:#153767}
+.auth-info-box h2{font-size:21px;margin:8px 0 13px}
+.auth-info-box p{font-size:13px;line-height:1.75;color:#4e6989}
+.auth-info-box .auth-support{font-size:12px;border-radius:12px;padding:10px;background:#eaf3fc;margin:14px 0}
+.auth-info-box button{min-height:46px;width:100%;margin-top:10px;border-radius:12px;border:0;background:#ffe175;color:#153767;font-weight:850;cursor:pointer}
+@media(orientation:landscape) and (max-height:600px) and (min-width:600px){body:has(#view .scoreboard) .auth-bio-btn{display:none}}
+
+
+/* 종료 알림: 경기 종료 후 상대방이 앱에 접속하면 확인 팝업 (서버 없는 체험판) */
+.k2-notification-btn{display:inline-flex;align-items:center;gap:5px;background:#e8f4ff;border:1px solid #b3d3ef;border-radius:99px;padding:7px 10px;color:#163b70;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.k2-notification-count{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 4px;background:#e25568;color:#fff;border-radius:99px;font-size:10px;line-height:1}
+.k2-notice-backdrop{position:fixed;inset:0;z-index:1100;display:grid;place-items:center;padding:15px;background:rgba(14,44,81,.55);backdrop-filter:blur(4px)}
+.k2-notice-backdrop[hidden]{display:none!important}
+.k2-notice-card{background:#f6fbff;width:min(100%,410px);border-radius:25px;padding:22px 20px 18px;box-shadow:0 25px 65px rgba(15,45,83,.35);text-align:center;color:#123969;border:1px solid #fff}
+.k2-notice-status{display:inline-flex;align-items:center;gap:5px;border-radius:99px;padding:7px 12px;background:#e2f4e9;color:#14704d;font-size:12px;font-weight:850}
+.k2-notice-emoji{font-size:34px;margin:13px 0 5px}
+.k2-notice-card h2{font-size:23px;margin:0 0 6px;color:#113869}
+.k2-notice-date{font-size:12px;color:#7189a5;margin:0 0 14px}
+.k2-notice-scores{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);align-items:center;gap:7px;background:#e7f2fe;border-radius:17px;padding:13px 9px;margin:10px 0 15px}
+.k2-notice-player{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;font-size:13px;font-weight:800;color:#163d70}
+.k2-notice-player .k2-notice-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.k2-notice-player strong{font-size:38px;line-height:1;color:#11376a}
+.k2-notice-player .k2-notice-result{font-size:11px;color:#63809e}
+.k2-notice-player .k2-notice-result.won{color:#1e8356}
+.k2-notice-sep{font-size:24px;font-weight:900;color:#7795b3}
+.k2-notice-ball{width:20px;height:20px;border-radius:100%;display:inline-block;border:1px solid #c2d4e6;box-shadow:0 2px 3px #12345616}
+.k2-notice-ball.yellow{background:#ffd42e}.k2-notice-ball.white{background:#fff}
+.k2-notice-desc{font-size:12px;color:#476b91;line-height:1.7;margin:0 0 15px}
+.k2-notice-confirm{background:#ffdd4f;border:0;border-radius:12px;padding:14px;width:100%;font-size:15px;font-weight:900;color:#183b6c;cursor:pointer}
+.k2-notice-small{font-size:11px;color:#7c90a9;margin:11px 0 0}
+@media(max-width:650px){.k2-notification-btn{padding:7px 8px;font-size:11px}.k2-notice-card{padding:20px 15px}}
+@media(orientation:landscape) and (max-height:600px){.k2-notice-card{max-height:94dvh;overflow:auto;padding:12px 20px}.k2-notice-emoji{font-size:24px;margin:7px 0}.k2-notice-scores{padding:7px;margin:7px 0}.k2-notice-player strong{font-size:30px}.k2-notice-card h2{font-size:19px}.k2-notice-desc{margin-bottom:9px}.k2-notice-confirm{padding:10px}}
+
+
+/* K2당구장 첫 화면: 내 기록 요약 + 최근 완료 경기 세 줄 */
+.home-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:2px 3px}
+.home-intro h2{font-size:23px;margin:0 0 2px;line-height:1.25;color:#113665}
+.home-intro h2 small{font-size:13px;color:#55759c;font-weight:650;margin-left:6px}
+.home-intro p{color:#5b78a8;font-size:12px;margin:3px 0 0}
+.home-play{flex:none;background:#123f79;border:0;border-radius:11px;color:#fff;padding:11px 14px;font-size:13px;font-weight:800;box-shadow:0 6px 14px #235a8d20;cursor:pointer}
+.home-recent-panel{padding-top:16px;padding-bottom:13px;margin-bottom:16px}
+.home-recent-title{margin-bottom:9px!important;gap:8px;align-items:center!important}
+.home-recent-title h2{margin:0 0 1px;font-size:18px}
+.home-recent-title .ghost{white-space:nowrap;font-size:12px;padding:7px 10px}
+.home-recent-game{display:grid;grid-template-columns:48px 30px minmax(0,1fr) auto;gap:9px;align-items:center;min-height:48px;padding:9px 3px;border-top:1px solid #d8e8f8}
+.home-recent-date{font-size:12px;color:#647e9b;font-variant-numeric:tabular-nums}
+.home-result{display:inline-flex;align-items:center;justify-content:center;border-radius:7px;padding:4px 2px;font-size:12px;font-weight:850}
+.home-result.win{color:#207551;background:#daf5e4}
+.home-result.loss{color:#b85060;background:#ffe3e7}
+.home-recent-opponent{font-size:13px;color:#5a769b;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home-recent-opponent strong{font-size:14px;color:#183c6b}
+.home-recent-score{white-space:nowrap;font-variant-numeric:tabular-nums;font-size:17px;font-weight:800;color:#4b6587}
+.home-recent-score b{color:#103b73;font-weight:900}
+.home-recent-score span{font-size:12px;color:#a0b4cc;margin:0 3px}
+@media(max-width:430px){.home-recent-game{grid-template-columns:42px 26px minmax(0,1fr) auto;gap:7px}.home-recent-date{font-size:11px}.home-recent-score{font-size:16px}.home-intro h2{font-size:21px}.home-play{font-size:12px;padding:10px 11px}}
+
+/* 모바일 홈: 앱 이름이 세로로 눌리지 않도록 헤더를 두 줄로 정렬 */
+@media (max-width:650px) and (orientation:portrait) {
+  #app-page header{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:7px;padding:9px 2px 11px}
+  #app-page header .brand-title{flex:0 0 100%;min-width:0;white-space:nowrap;gap:10px}
+  #app-page header h1{white-space:nowrap;font-size:21px}
+  #app-page header > .flex{flex:1 1 100%;width:100%;min-width:0;display:flex;gap:6px;justify-content:flex-start;flex-wrap:wrap}
+  #app-page header .tag{display:none}
+  #app-page header .flex button{white-space:nowrap;font-size:11px;padding:6px 8px}
+}
+
+/* 경기 시작 화면: 노랑/흰공 선수 배정 및 선공 선택 */
+.start-match-panel{max-width:740px;margin:0 auto 14px}
+.start-player-picks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.start-player-card{display:flex;flex-direction:column;gap:10px;min-width:0;padding:16px;border-radius:18px;border:1px solid rgba(35,82,131,.12)}
+.start-yellow{background:linear-gradient(180deg,#ffe98f,#f3d962)}
+.start-white{background:linear-gradient(180deg,#fff,#edf5fd)}
+.start-player-heading{display:flex;align-items:center;gap:8px;font-size:16px;color:#13376b}
+.start-ball{width:19px;height:19px;display:inline-block;border-radius:50%;flex-shrink:0;border:1px solid #fff;box-shadow:0 2px 5px #15376a20}
+.start-ball-yellow{background:#ffd02b}
+.start-ball-white{background:#fff;border-color:#bccbdc}
+.start-player-card select{width:100%;padding:11px 32px 11px 10px;min-width:0;border:1px solid #a9c1dd;border-radius:12px;background:#fff;color:#123668;font-size:14px;font-weight:700}
+.start-player-card select:focus-visible{outline:2px solid #2566a0;outline-offset:2px}
+.start-swap-row{display:flex;justify-content:center;margin:11px 0 17px}
+.start-swap{border:1px solid #afccec;background:#e6f2ff;padding:8px 15px;border-radius:99px;color:#235189;font-size:13px;font-weight:800;box-shadow:0 2px 5px #1b508019}
+.start-swap span{font-size:20px;vertical-align:-2px;margin-right:5px}
+.start-first-field{border:0;padding:0;margin:0 0 12px;min-width:0}
+.start-first-field legend{font-weight:850;font-size:16px;padding:0;margin-bottom:9px;color:#143866}
+.start-first-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.start-first-choice{display:block;cursor:pointer;min-width:0;position:relative}
+.start-first-choice>input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0}
+.start-first-choice>span{min-height:62px;display:flex;align-items:center;gap:8px;padding:11px 12px;background:#f3f8fd;border:1px solid #c0d5eb;border-radius:14px;transition:background .13s,box-shadow .13s}
+.start-first-choice>span>i{width:18px;height:18px}
+.start-first-choice b{font-size:13px;white-space:nowrap}
+.start-first-choice small{font-size:11px;color:#5a7390;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.start-first-choice input:checked+span{background:#e6f3ff;box-shadow:inset 0 0 0 2px #4d8ac3; border-color:#4d8ac3}
+.start-first-choice input:focus-visible+span{outline:3px solid #245da2;outline-offset:2px}
+.start-note{font-size:12px;color:#587197;background:#e9f3fc;padding:11px 13px;border-radius:12px;margin:5px 0 14px}
+.start-begin{display:block;width:100%;min-height:52px;font-size:16px}
+@media(max-width:440px){.start-player-picks,.start-first-options{gap:8px}.start-player-card{padding:11px}.start-player-heading{font-size:14px;gap:6px}.start-player-card select{font-size:12px;padding:10px 24px 10px 7px}.start-first-choice>span{flex-wrap:wrap;gap:4px 7px;padding:10px 7px}.start-first-choice small{width:100%;padding-left:24px}.start-first-choice b{font-size:12px}}
+
+
+/* 게스트 경기: 기존 K2 디자인 및 가로 점수판 비율 유지 */
+.match-mode{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 15px;background:#e2eefb;border-radius:14px;padding:5px}
+.match-mode-btn{border:0;border-radius:10px;padding:13px 7px;background:transparent;color:#42638c;font-size:15px;font-weight:850;cursor:pointer}
+.match-mode-btn.selected{background:#fff;box-shadow:0 4px 12px rgba(41,85,131,.17);color:#153b70}
+.match-mode-btn[data-mode="guest"].selected{background:#fff2bb;color:#865c00}
+.guest-inputs{display:grid;grid-template-columns:1.5fr 1fr;gap:12px;margin-bottom:9px}
+.guest-inputs .field{display:flex;flex-direction:column;gap:7px;font-weight:800;color:#21497c}
+.guest-inputs input{width:100%;min-width:0;border:1px solid #a9cce7;background:#fff;padding:11px 12px;border-radius:11px;font-size:15px;color:#123668}
+.guest-explain{background:#fff6d9;color:#8c691c;border-radius:11px;padding:11px 12px;font-size:12px;font-weight:700;margin-bottom:15px}
+.guest-home-panel .row{gap:10px;align-items:center}.guest-home-panel .ghost{white-space:nowrap}
+.event-pill{background:#fff0b8;color:#906700}
+.guest-record-panel{margin-top:14px}
+@media(max-width:460px){.guest-inputs{grid-template-columns:1fr 1fr;gap:8px}.guest-inputs input{font-size:13px;padding:10px 7px}.match-mode-btn{font-size:13px}}
+
+
+/* K2: 홈 상단 공지 1건 + 전체 공지 확인 */
+.k2-bulletin-teaser{background:linear-gradient(135deg,#fff8db 0%,#fff1c0 100%);border:1px solid rgba(221,173,48,.36);border-radius:16px;padding:13px 15px;margin:0 0 15px;box-shadow:0 5px 13px rgba(169,131,38,.09);color:#17406e}
+.k2-bulletin-label{display:flex;align-items:center;gap:7px;color:#926515;font-weight:850;font-size:12px;margin-bottom:8px}
+.k2-bulletin-label .k2-bulletin-spacer{flex:1}
+.k2-bulletin-all{border:0;background:transparent;cursor:pointer;padding:4px 0 4px 8px;color:#365b85;font-weight:750;font-size:12px}
+.k2-bulletin-feature{display:block;border:0;background:transparent;text-align:left;padding:0;width:100%;color:inherit;cursor:pointer}
+.k2-bulletin-feature strong{font-size:15px;display:block;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.k2-bulletin-feature span{display:block;color:#647b94;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:3px}
+.k2-bulletin-main{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.k2-bulletin-main>button{flex:1;min-width:0}
+.k2-bulletin-main>span{font-size:18px;color:#a18740}
+.k2-bulletin-page{display:grid;gap:13px}
+.k2-bulletin-header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:2px}
+.k2-bulletin-header h2{margin:0;font-size:23px}
+.k2-bulletin-back{border:1px solid #bad6ee;background:#e9f5ff;color:#214a7b;border-radius:10px;cursor:pointer;font-size:12px;font-weight:750;padding:8px 11px}
+.k2-bulletin-list{display:grid;gap:9px}
+.k2-bulletin-entry{padding:14px 15px;border:1px solid #d3e2f3;border-radius:13px;background:#f7fbff}
+.k2-bulletin-entry.active{border-color:#bbd7ee;background:#fffdf7}
+.k2-bulletin-open{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;text-align:left;width:100%;border:0;padding:0;background:transparent;color:#133962;cursor:pointer}
+.k2-bulletin-open strong{display:block;font-size:15px;margin-bottom:4px;line-height:1.4}
+.k2-bulletin-entry-date{display:block;font-size:11px;color:#6e87a4}
+.k2-bulletin-body{white-space:pre-wrap;overflow-wrap:anywhere;border-top:1px solid #e6e5d6;margin-top:12px;padding-top:12px;color:#274d75;font-size:13px;line-height:1.7}
+.k2-bulletin-tools{display:flex;justify-content:flex-end;gap:7px;margin-top:11px}
+.k2-bulletin-tools button{background:#e5f0fd;border:1px solid #c0d8ee;border-radius:8px;color:#355c86;padding:6px 11px;cursor:pointer;font-size:12px}
+.k2-bulletin-editor{padding:17px;background:#f2f8ff;border:1px solid #c5dced;border-radius:16px;margin-top:2px}
+.k2-bulletin-editor h3{margin:0 0 7px;font-size:16px}
+.k2-bulletin-editor label{display:block;font-size:12px;font-weight:750;color:#2a537e;margin:11px 0 0}
+.k2-bulletin-editor input,.k2-bulletin-editor textarea{display:block;width:100%;margin-top:5px;border:1px solid #bad5ea;border-radius:10px;background:white;color:#133b68;font:inherit;font-size:14px;padding:10px;resize:vertical}
+.k2-bulletin-editor textarea{min-height:85px}
+.k2-bulletin-editor form button{background:#1b5594;color:#fff;border:0;border-radius:10px;padding:10px 17px;margin-top:12px;cursor:pointer;font-weight:750}
+.k2-bulletin-editor .k2-cancel-edit{background:#d9e8f9;color:#244b78;margin-left:6px}
+.k2-bulletin-hint{font-size:11px;color:#63819f;margin:9px 0 0;line-height:1.6}
+@media(max-width:460px){.k2-bulletin-teaser{padding:11px 12px}.k2-bulletin-header h2{font-size:20px}}
+
+
+/* K2 핸디 레벨업 시스템 */
+.k2-handi-card{border-radius:20px;padding:17px;margin:0 0 15px;border:1px solid #a9c8ef;background:linear-gradient(128deg,#edf7ff,#dcecff 55%,#fff5c9);box-shadow:0 9px 24px #386fa31f;color:#163c6c}
+.k2-handi-title{display:flex;align-items:center;gap:8px;justify-content:space-between;flex-wrap:wrap}
+.k2-handi-title h2{font-size:17px;margin:0;font-weight:900}.k2-handi-level{display:flex;align-items:baseline;gap:10px;margin:12px 0 4px}.k2-handi-level strong{font-size:37px;font-weight:950;letter-spacing:-.06em;color:#153b79}.k2-handi-level span{font-size:13px;font-weight:800;color:#547499}
+.k2-handi-stage{font-size:12px;color:#516f91;line-height:1.6}
+.k2-handi-meter{height:18px;border-radius:999px;padding:3px;background:#b9d4ee;box-shadow:inset 0 2px 4px #527aa54b;margin:11px 0 7px;overflow:hidden}
+.k2-handi-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#53b0ff,#1a6cdb 70%,#ffe054);box-shadow:0 1px 3px #286fc85c;transition:width .35s}
+.k2-handi-line{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;font-weight:800}
+.k2-handi-minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:13px 0}
+.k2-handi-mini{background:#ffffffb5;border-radius:12px;text-align:center;padding:9px 4px;border:1px solid #c1d9ee}
+.k2-handi-mini span{display:block;color:#6a88a7;font-size:10px;margin-bottom:4px}
+.k2-handi-mini b{font-size:17px;color:#1b4579;font-weight:900}
+.k2-handi-status{background:#f9fcffbd;border-radius:10px;padding:9px 11px;color:#4b6e96;font-size:12px;line-height:1.5}
+.k2-handi-rule-btn,.k2-bulletin-rule{border:0;border-radius:10px;padding:6px 10px;cursor:pointer;background:#d5e9fe;color:#1b538a;font-size:11px;font-weight:850}
+.k2-bulletin-rule{margin-top:10px;background:#ffebaf;color:#7c5906}
+.k2-handi-rule-body{white-space:normal}.k2-handi-rule-body p{margin:0 0 10px}.k2-handi-rule-body strong{color:#174775}
+.k2-handi-rule-list{padding-left:20px;margin:8px 0 14px;line-height:1.8}
+.k2-handi-table-scroll{overflow-x:auto;margin:9px 0}.k2-handi-table{border-collapse:collapse;width:100%;min-width:420px;font-size:12px;text-align:center}
+.k2-handi-table th,.k2-handi-table td{padding:8px 7px;border:1px solid #cadced}.k2-handi-table th{background:#e0efff;color:#214d80}
+.k2-system-chip{font-size:10px;color:#a2760f;background:#fff0bc;border-radius:99px;padding:3px 6px}
+.k2-level-up-backdrop[hidden]{display:none}.k2-level-up-backdrop{position:fixed;inset:0;z-index:300;background:#09294e9c;display:flex;align-items:center;justify-content:center;padding:18px}
+.k2-level-up-dialog{background:linear-gradient(160deg,#fff5c2,#ffffff 40%,#dceeff);text-align:center;border-radius:25px;padding:26px 20px;width:min(360px,95vw);box-shadow:0 30px 55px #09264b66}
+.k2-level-up-dialog .k2-level-star{font-size:47px;animation:k2-pop .65s ease both}.k2-level-up-dialog h2{font-size:28px;color:#174577;margin:4px 0 8px}.k2-level-up-dialog p{color:#4e7092;line-height:1.6;font-size:14px}.k2-level-up-dialog button{background:#f5cf45;border:0;border-radius:12px;padding:13px;width:100%;font-size:15px;font-weight:900;color:#173f72;cursor:pointer}
+@keyframes k2-pop{0%{transform:scale(.5) rotate(-12deg)}70%{transform:scale(1.15) rotate(6deg)}100%{transform:scale(1)}}
+@media(max-width:460px){.k2-handi-card{padding:13px}.k2-handi-level strong{font-size:32px}.k2-handi-mini b{font-size:15px}}
+
+
+/* ===== 2026-10-14 점수판 개편: 큰 점수 + 가운데 이닝 ===== */
+.scoreboard{grid-template-columns:minmax(0,1fr) minmax(110px,.52fr) minmax(0,1fr)!important;gap:12px!important;align-items:stretch!important;background:#96c1e8!important;padding:10px!important;border-radius:24px!important}
+.k2-player-card{display:flex;flex-direction:column;justify-content:space-between;min-height:210px}
+.player-card.yellow-side{background:#ffe36c!important;border:3px solid #efc100!important}
+.player-card.white-side{background:#fbfdff!important;border:3px solid #d5e2ef!important}
+.player-card.yellow-side.current-turn{background:#ffea84!important;border-color:#dca900!important;box-shadow:0 12px 26px rgba(211,163,0,.26)!important}
+.player-card.white-side.current-turn{background:#ffffff!important;border-color:#8eb2da!important;box-shadow:0 0 0 4px rgba(39,88,144,.22),0 12px 26px rgba(26,61,108,.18)!important}
+.k2-player-card .name-row{margin-bottom:8px!important;align-items:flex-start!important;flex-direction:column!important}
+.k2-player-card .player-name{font-size:20px!important;line-height:1.15}
+.k2-player-card .turn-pill{margin-top:4px}
+.k2-player-card .scoreline{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:8px 0 12px!important}
+.k2-player-card .scoreline .big-score{font-size:clamp(74px,10vw,110px)!important;line-height:.9!important;font-weight:900!important;letter-spacing:-.08em!important;color:#163a68!important}
+.k2-player-card .scoreline .target{font-size:clamp(20px,2.6vw,30px)!important;margin-bottom:9px!important;color:#406087!important}
+.k2-player-card .statrow{justify-content:space-between!important;gap:8px!important;padding-top:10px!important;font-size:14px!important}
+.k2-player-card .statrow span:first-child{margin-right:auto}
+.inning-panel{border-radius:22px;background:linear-gradient(180deg,#f6fbff,#deefff);border:3px solid #a9c8e5;box-shadow:inset 0 1px 0 rgba(255,255,255,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 8px;min-height:210px;text-align:center}
+.inning-label{font-size:18px;font-weight:900;color:#355a89;letter-spacing:-.04em}
+.inning-value{font-size:clamp(54px,7vw,82px);line-height:1;font-weight:900;color:#163a68;letter-spacing:-.06em;margin:8px 0}
+.inning-state{font-size:14px;font-weight:800;color:#5376a7;line-height:1.35}
+@media(max-width:650px){
+  .scoreboard{grid-template-columns:minmax(0,1fr) 92px minmax(0,1fr)!important;gap:8px!important;padding:8px!important}
+  .k2-player-card{min-height:176px;padding:12px 10px!important}
+  .k2-player-card .player-name{font-size:15px!important}
+  .k2-player-card .scoreline{margin:4px 0 8px!important;gap:4px!important;justify-content:flex-start!important;flex-wrap:nowrap!important}
+  .k2-player-card .scoreline .big-score{font-size:clamp(54px,14vw,72px)!important}
+  .k2-player-card .scoreline .target{font-size:16px!important;margin-bottom:6px!important}
+  .k2-player-card .statrow{font-size:11px!important;display:flex!important;flex-direction:column!important;gap:2px!important}
+  .inning-panel{min-height:176px;padding:8px 5px;border-radius:18px}
+  .inning-label{font-size:15px}
+  .inning-value{font-size:clamp(42px,10vw,56px)}
+  .inning-state{font-size:11px}
+}
+@media (orientation: landscape) and (max-height:600px) and (min-width:600px){
+  #view:has(.scoreboard) .scoreboard{grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr)!important;gap:6px!important;padding:6px!important}
+  #view:has(.scoreboard) .k2-player-card{min-height:0;height:100%;padding:6px 7px!important}
+  #view:has(.scoreboard) .k2-player-card .name-row{margin-bottom:2px!important}
+  #view:has(.scoreboard) .k2-player-card .player-name{font-size:13px!important}
+  #view:has(.scoreboard) .k2-player-card .turn-pill{font-size:9px!important;padding:2px 5px!important}
+  #view:has(.scoreboard) .k2-player-card .scoreline .big-score{font-size:clamp(38px,6.2vw,52px)!important}
+  #view:has(.scoreboard) .k2-player-card .scoreline .target{font-size:16px!important;margin-bottom:4px!important}
+  #view:has(.scoreboard) .k2-player-card .statrow{font-size:10px!important;padding-top:5px!important;gap:4px!important;display:flex!important;flex-direction:column!important}
+  #view:has(.scoreboard) .inning-panel{min-height:0;height:100%;padding:4px 4px;border-radius:14px}
+  #view:has(.scoreboard) .inning-label{font-size:13px}
+  #view:has(.scoreboard) .inning-value{font-size:clamp(30px,5vw,42px);margin:4px 0}
+  #view:has(.scoreboard) .inning-state{font-size:10px}
+}
+</style></head><body class="auth-view"><section class="auth-screen" id="auth-gate" aria-label="K2당구장 회원 시작"><div class="auth-card">
+<div class="auth-logo"><span class="auth-ball-set"><i></i><i></i><i></i></span>K2당구장</div>
+<p class="auth-intro">PIN이나 비밀번호 없이 내 이름으로 시작하세요.<br>같은 기기에서는 다음부터 자동으로 접속해요.</p>
+<div class="auth-step" id="auth-step">첫 이용 · 이름 등록</div>
+<h2 id="auth-heading">내 이름으로 시작하기</h2><p class="auth-desc" id="auth-description">이미 등록된 회원이라면 이름을 선택하고, 없다면 새로 등록하세요.</p>
+<form id="auth-form" autocomplete="off">
+<label class="auth-field" id="auth-member-label">내 이름<select id="auth-member"><option value="">이름을 선택해 주세요</option></select></label>
+<button class="auth-mini-btn" type="button" id="auth-new-toggle" aria-expanded="false">+ 명단에 이름이 없어요 · 새 회원 등록</button>
+<div class="auth-new-fields" id="auth-new-fields" hidden>
+<label class="auth-field">사용할 이름 또는 닉네임<input id="auth-new-name" name="memberName" maxlength="20" placeholder="예: 김철수" autocomplete="nickname"></label>
+<label class="auth-field">핸디 (목표점수)<input id="auth-new-handicap" name="memberHandicap" type="number" min="1" max="50" value="20"></label>
+</div>
+<div id="auth-inputs"></div>
+<p role="alert" class="auth-error" id="auth-error"></p>
+<button class="auth-primary" type="submit" id="auth-submit" disabled>이름을 선택해 주세요</button></form>
+<div class="auth-device-line"><span class="auth-fingerprint">☝️</span><span>지문·얼굴 인증은 정식 앱에서 기기 인증과 연결할 예정이에요.</span></div>
+<button class="auth-mini-btn" type="button" id="auth-bio-gate">생체인식 적용 방식 보기 ↗</button>
+<div class="auth-note">📱 체험판: 이름과 자동 접속 상태는 이 브라우저에만 보관돼요. 서버 인증이 없으므로 다른 회원의 계정·기록을 안전하게 보호하지는 못합니다.</div>
+</div></section><div class="page" id="app-page" hidden><header><div class="brand-title"><div class="brand-balls"><span class="brand-ball ball-yellow"></span><span class="brand-ball ball-red"></span><span class="brand-ball ball-white"></span></div><h1>K2당구장</h1></div><div class="flex"><button type="button" class="focus-menu-btn" data-act="toggle-menu" aria-expanded="false">☰ 메뉴</button><span class="tag">체험판 · 기기 내 저장</span><button type="button" class="k2-notification-btn" data-act="notice-open" title="내 경기 완료 알림">🔔 완료 알림 <span class="k2-notification-count" id="k2-notice-count" hidden>0</span></button><button type="button" class="auth-bio-btn" data-act="bio-info">☝️ 생체인식 안내</button><button type="button" class="auth-account" data-act="auth-logout" title="로그아웃 또는 다른 회원 선택" id="account-button">내 계정</button></div></header><div class="banner"><div class="muted" style="color:#e1b96c">3쿠션 전적 공유 체험</div><div class="row"><strong>K2당구장 경기 기록</strong><span class="small" id="memberCount"></span></div><p class="muted">실시간 경기 종료 시 자동 저장하고, 상대방에게 완료 알림을 남깁니다.</p></div><nav class="tabs" id="tabs"></nav><div id="alert" class="alert"></div><div id="success" class="success"></div><main id="view"></main><div class="foot">경기 완료 알림은 체험판 내에서만 확인할 수 있습니다 · 실제 상대방 휴대폰 푸시 알림은 서버 연결 후 지원</div></div>
+<div id="k2-complete-dialog" class="k2-notice-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="k2-complete-title"><div class="k2-notice-card">
+<span class="k2-notice-status">✓ 경기 완료</span><div class="k2-notice-emoji">🎱</div><h2 id="k2-complete-title">경기가 종료되었습니다!</h2>
+<p class="k2-notice-date" id="k2-complete-date"></p><div class="k2-notice-scores" id="k2-complete-scores"></div>
+<p class="k2-notice-desc">경기 결과가 저장되어 두 선수의 전적과 월별 누적 기록에 반영되었습니다.</p>
+<button type="button" class="k2-notice-confirm" data-act="notice-confirm">확인</button>
+<p class="k2-notice-small">확인은 알림을 닫는 용도이며, 경기 결과를 승인하는 절차가 아닙니다.</p>
+</div></div>
+<div class="k2-level-up-backdrop" id="k2-levelup-dialog" hidden role="dialog" aria-modal="true" aria-labelledby="k2-levelup-title"><div class="k2-level-up-dialog"><div class="k2-level-star">🏆🎱✨</div><h2 id="k2-levelup-title">LEVEL UP!</h2><p id="k2-levelup-message"></p><button type="button" id="k2-levelup-ok">새 핸디로 계속하기</button></div></div>
+<div id="bio-info-dialog" class="auth-info-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="bio-info-title"><div class="auth-info-box">
+<div style="font-size:35px">☝️</div><h2 id="bio-info-title">생체인식 로그인 적용 안내</h2>
+<p>정식 K2당구장 앱에서는 최초 계정 등록 후 <b>패스키(Passkey)</b>를 연결해, 필요할 때 갤럭시 지문·얼굴·기기 잠금으로 본인을 확인하는 방식으로 만들 계획이에요.</p>
+<p>지금 체험판에서는 서버가 연결되지 않았기 때문에 실제 생체인식 등록이나 인증은 실행하지 않아요. 대신 같은 브라우저에서 자동 접속 흐름을 시험할 수 있어요.</p>
+<div class="auth-support" id="bio-support-result">아래에서 현재 브라우저의 생체인식 지원 가능 여부를 확인해 보세요.</div>
+<button id="bio-support-check" type="button" style="background:#e9f3ff">이 기기 지원 여부 확인</button>
+<button id="bio-info-close" type="button">확인</button>
+</div></div>
+<script>
+(()=>{
+'use strict';const KEY='billiards_demo_v1';const seed={live:null,current:1,tab:'home',users:[{id:1,name:'철수',handicap:22},{id:2,name:'영호',handicap:20},{id:3,name:'민수',handicap:18},{id:4,name:'준호',handicap:24}],games:[{id:101,a:1,b:2,pa:22,pb:17,ia:30,ib:30,winner:1,date:'2026-10-08',status:'confirmed',createdBy:1},{id:102,a:2,b:3,pa:20,pb:14,ia:32,ib:32,winner:2,date:'2026-10-09',status:'confirmed',createdBy:2},{id:103,a:3,b:1,pa:18,pb:17,ia:28,ib:28,winner:3,date:'2026-10-10',status:'confirmed',createdBy:3},{id:104,a:1,b:4,pa:22,pb:19,ia:35,ib:35,winner:1,date:'2026-10-12',status:'pending',createdBy:1}]};let state;try{const stored=JSON.parse(localStorage.getItem(KEY));state=stored&&Array.isArray(stored.users)&&Array.isArray(stored.games)?stored:structuredClone(seed)}catch(_){state=structuredClone(seed)};if(!state.live)state.live=null;else{state.live.goalNotified=Array.isArray(state.live.goalNotified)?state.live.goalNotified:[false,false];state.live.goalPrompt=state.live.goalPrompt||null}
+if(!Array.isArray(state.notifications))state.notifications=[];
+if(!Array.isArray(state.bulletins))state.bulletins=[{id:1,title:'K2당구장 공지사항 안내',body:'당구장 일정, 친선대회 및 휴무 안내 등을 이곳에서 확인하실 수 있습니다.\n\n이 글은 화면을 확인하기 위한 예시 공지입니다. 공지사항 페이지에서 실제 내용을 작성하거나 이 글을 삭제해 주세요.',date:'2026-10-13',example:true}];
+  if(!Array.isArray(state.events))state.events=[];
+  if(state.startMode!=='guest')state.startMode='member';
+if(state.tab==='new')state.tab='live';
+// 기존 경기/이벤트 기록은 유지. 핸디 경험치는 이 버전을 도입한 이후 확정 경기부터 계산.
+if(!state.handiTrackers||typeof state.handiTrackers!=='object')state.handiTrackers={};
+if(!Array.isArray(state.handiLevelUps))state.handiLevelUps=[];
+const HANDI_GAMES=20,HANDI_WINS=14,HANDI_XP_PER_GAME=5,HANDI_SYS_ID=0;
+const oldMaxGame=Math.max(0,...state.games.filter(g=>g.status==='confirmed').map(g=>Number(g.id)||0));
+for(const u of state.users){
+ const k=String(u.id);
+ if(!state.handiTrackers[k])state.handiTrackers[k]={afterGameId:oldMaxGame,startedAt:new Date().toISOString()};
+}
+const $=sel=>document.querySelector(sel);const safe=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const user=id=>state.users.find(x=>x.id===id);const name=id=>safe(user(id)?.name||'알 수 없음');const fmt=n=>Number.isFinite(n)?n.toFixed(3):'0.000';const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(_){}};function flash(message,kind='success'){$('#alert').style.display='none';$('#success').style.display='none';$('#'+kind).textContent=message;$('#'+kind).style.display='block';setTimeout(()=>{$('#'+kind).style.display='none'},3500)};
+// K2 device session preview: no PIN, no password, no server-side identity verification.
+// Actual user authentication and passkeys must be implemented with an HTTPS backend.
+const AUTH_KEY='k2_billiards_device_demo_v1';
+let auth={profiles:{},sessionId:null};
+try{
+ const val=JSON.parse(localStorage.getItem(AUTH_KEY));
+ if(val&&typeof val==='object'&&val.profiles&&typeof val.profiles==='object')auth={profiles:val.profiles,sessionId:val.sessionId??null};
+}catch(_){ }
+// Keep the same selected member when moving from the earlier PIN preview on this device.
+if(!auth.sessionId){
+ try{
+  const legacy=JSON.parse(localStorage.getItem('k2_billiards_pin_demo_v1'));
+  const previous=Number(legacy?.sessionId);
+  if(previous&&legacy?.profiles?.[String(previous)]&&user(previous)){
+   auth.profiles[String(previous)]={joinedAt:new Date().toISOString(), migrated:true};
+   auth.sessionId=previous;
+  }
+ }catch(_){ }
+}
+const storeAuth=()=>{try{localStorage.setItem(AUTH_KEY,JSON.stringify(auth))}catch(_){}};
+let newMemberMode=false;
+const activeProfile=()=>Boolean(auth.sessionId&&auth.profiles[String(auth.sessionId)]&&user(Number(auth.sessionId)));
+function showGate(){
+ document.body.classList.add('auth-view');$('#auth-gate').hidden=false;$('#app-page').hidden=true;
+ $('#auth-member').innerHTML='<option value="">이름을 선택해 주세요</option>'+state.users.map(u=>`<option value="${u.id}">${safe(u.name)} · 핸디 ${u.handicap}점</option>`).join('');
+ $('#auth-member').value='';newMemberMode=false;authFields();window.scrollTo(0,0);
+}
+function authFields(){
+ const id=Number($('#auth-member').value),u=user(id);
+ const a=$('#auth-new-name');
+ $('#auth-error').textContent='';
+ $('#auth-new-fields').hidden=!newMemberMode;
+ $('#auth-member-label').hidden=newMemberMode;
+ $('#auth-new-toggle').textContent=newMemberMode?'← 명단에서 내 이름 선택':'+ 명단에 이름이 없어요 · 새 회원 등록';
+ $('#auth-new-toggle').setAttribute('aria-expanded',String(newMemberMode));
+ $('#auth-inputs').innerHTML='';
+ if(newMemberMode){
+  $('#auth-step').textContent='새 회원 등록';
+  $('#auth-heading').textContent='내 이름 등록하기';
+  $('#auth-description').textContent='이름과 핸디만 입력하면 바로 사용할 수 있어요.';
+  $('#auth-inputs').innerHTML='<div class="auth-mode-note">🔔 이름을 등록해도 아직 서버 인증이 없어 본인 확인이 되지는 않아요.</div>';
+  $('#auth-submit').textContent='이 이름으로 시작하기';
+  $('#auth-submit').disabled=!a.value.trim();
+  return;
+ }
+ $('#auth-step').textContent='첫 이용 · 이름 선택';
+ $('#auth-heading').textContent='내 이름으로 시작하기';
+ $('#auth-description').textContent='명단에서 내 이름을 선택하세요. 다시 실행하면 같은 기기에서는 자동 접속해요.';
+ $('#auth-submit').disabled=!u;
+ if(!u){$('#auth-submit').textContent='이름을 선택해 주세요';return}
+ const exists=Boolean(auth.profiles[String(id)]);
+ $('#auth-inputs').innerHTML=`<div class="auth-avatar">🎱 ${safe(u.name)} 선수 · 핸디 ${u.handicap}점</div><div class="auth-mode-note">${exists?'이 기기에 이전 사용 기록이 있어요.':'이 기기에서는 처음 사용하는 이름이에요.'} 이 체험판은 이름 선택만으로 접속되며 실제 본인 확인은 정식 버전에서 연결됩니다.</div>`;
+ $('#auth-submit').textContent=exists?'내 기록으로 접속하기':'이 이름으로 시작하기';
+}
+function enterApp(id){
+ auth.profiles[String(id)] ??={joinedAt:new Date().toISOString()};
+ auth.sessionId=id;storeAuth();state.current=id;delete state.monthView;state.tab='home';
+ $('#auth-gate').hidden=true;$('#app-page').hidden=false;document.body.classList.remove('auth-view');
+ render();window.scrollTo(0,0);openNextNotice();
+}
+function logoutAuth(){
+ auth.sessionId=null;storeAuth();showingNoticeId=null;$('#k2-complete-dialog').hidden=true;document.body.classList.remove('focus-menu-open');showGate();
+}
+function submitAuth(e){
+ e.preventDefault();const err=$('#auth-error');err.textContent='';
+ if(newMemberMode){
+  const memberName=$('#auth-new-name').value.trim(),handicap=Number($('#auth-new-handicap').value);
+  if(!memberName||memberName.length>20){err.textContent='이름을 1~20자로 입력해 주세요.';return}
+  if(!Number.isInteger(handicap)||handicap<1||handicap>50){err.textContent='핸디는 1~50 사이 숫자로 입력해 주세요.';return}
+  if(state.users.some(u=>u.name.trim().toLocaleLowerCase()===memberName.toLocaleLowerCase())){
+   err.textContent='이미 등록된 이름이에요. 기존 회원 명단에서 선택해 주세요.';return;
+  }
+  const id=Math.max(0,...state.users.map(u=>u.id))+1;
+  state.users.push({id,name:memberName,handicap});ensureHandi(id);save();enterApp(id);return;
+ }
+ const chosen=Number($('#auth-member').value);
+ if(!user(chosen)){err.textContent='본인 이름을 선택해 주세요.';return}
+ enterApp(chosen);
+}
+function showBioInfo(){
+ $('#bio-info-dialog').hidden=false;
+ $('#bio-support-result').textContent='아래에서 현재 브라우저의 생체인식 지원 가능 여부를 확인해 보세요.';
+ $('#bio-info-close').focus();
+}
+function hideBioInfo(){$('#bio-info-dialog').hidden=true}
+async function checkBioSupport(){
+ const out=$('#bio-support-result');
+ if(!window.isSecureContext){out.textContent='지금 페이지는 보안 연결(HTTPS)이 아니라 생체인식을 사용할 수 없어요. 정식 배포 시 HTTPS가 필요해요.';return}
+ if(!window.PublicKeyCredential||typeof PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable!=='function'){
+  out.textContent='이 브라우저에서는 플랫폼 인증 장치 지원을 확인할 수 없어요.';return;
+ }
+ try{
+  const supported=await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+  out.textContent=supported?'이 브라우저에서 기기 인증 기능을 사용할 수 있어 보여요. 단, 실제 로그인 연결에는 서버와 패스키 등록이 필요해요.':'이 브라우저에서는 플랫폼 인증 장치가 확인되지 않았어요. 다른 기기 인증 수단이나 별도 로그인 방법이 필요할 수 있어요.';
+ }catch(_){out.textContent='지원 여부를 확인하지 못했어요. 브라우저 설정이나 보안 연결을 확인해 주세요.'}
+}
+$('#auth-new-toggle').addEventListener('click',()=>{newMemberMode=!newMemberMode;authFields();if(newMemberMode)$('#auth-new-name').focus()});
+$('#auth-new-name').addEventListener('input',authFields);
+$('#auth-bio-gate').addEventListener('click',showBioInfo);
+$('#bio-info-close').addEventListener('click',hideBioInfo);
+$('#bio-support-check').addEventListener('click',checkBioSupport);
+$('#bio-info-dialog').addEventListener('click',e=>{if(e.target.id==='bio-info-dialog')hideBioInfo()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#bio-info-dialog').hidden)hideBioInfo()});
+
+const confirmed=()=>state.games.filter(g=>g.status==='confirmed');
+  const guestId=-1;
+  const isGuestMatch=L=>L?.kind==='guest';
+  const matchName=(L,id)=>id===guestId?safe(L.guestName||'게스트'):name(id);
+  const myEventGames=()=>state.events.filter(g=>g.memberId===state.current).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||Number(b.id)-Number(a.id));const myGames=()=>state.games.filter(g=>g.a===state.current||g.b===state.current).sort((a,b)=>b.id-a.id);
+// These notices are kept ONLY in this browser's localStorage. No cross-phone push service yet.
+const noticesFor=id=>state.notifications.filter(n=>n.to===id);
+const unreadFor=id=>noticesFor(id).filter(n=>!n.seen);
+let showingNoticeId=null;
+function refreshNoticeBadge(){
+ const node=$('#k2-notice-count');if(!node)return;
+ const count=unreadFor(Number(auth.sessionId)).length;
+ node.hidden=!count;node.textContent=String(count);
+}
+function openNextNotice(){
+ if(!activeProfile())return;
+ const n=unreadFor(Number(auth.sessionId))[0];
+ if(!n){showingNoticeId=null;$('#k2-complete-dialog').hidden=true;refreshNoticeBadge();return}
+ const g=state.games.find(g=>g.id===n.gameId&&g.status==='confirmed'&&(g.a===state.current||g.b===state.current));
+ if(!g){n.seen=true;save();return openNextNotice()}
+ showingNoticeId=n.id;
+ $('#k2-complete-date').textContent=g.date+' · 완료된 경기';
+ const player=(id,ball,score)=>`<div class="k2-notice-player"><span class="k2-notice-ball ${ball}" aria-hidden="true"></span><span class="k2-notice-name">${name(id)}</span><strong>${score}</strong><span class="k2-notice-result ${g.winner===id?'won':''}">${g.winner===id?'승리':'패배'}</span></div>`;
+ $('#k2-complete-scores').innerHTML=player(g.a,'yellow',g.pa)+'<span class="k2-notice-sep">:</span>'+player(g.b,'white',g.pb);
+ $('#k2-complete-dialog').hidden=false;refreshNoticeBadge();
+ $('#k2-complete-dialog [data-act="notice-confirm"]').focus();
+}
+function confirmNotice(){
+ const n=state.notifications.find(n=>n.id===showingNoticeId&&n.to===Number(auth.sessionId));
+ if(n){n.seen=true;save()}
+ showingNoticeId=null;openNextNotice();
+}
+function stat(id){const m=confirmed().filter(g=>g.a===id||g.b===id);const wins=m.filter(g=>g.winner===id).length;let points=0,innings=0;for(const g of m){const first=g.a===id;points+=first?g.pa:g.pb;innings+=first?g.ia:g.ib}return {games:m.length,wins,losses:m.length-wins,points,innings,avg:innings?points/innings:0,winRate:m.length?wins/m.length:0}}function ranks(){return state.users.map(u=>({...u,...stat(u.id)})).sort((a,b)=>b.winRate-a.winRate||b.games-a.games||b.avg-a.avg)}function gameRow(g){
+ const result=g.status==='confirmed'?'<span class="pill good">기록 완료</span>':g.status==='rejected'?'<span class="pill bad">이전 제외 기록</span>':'<span class="pill pending">이전 미확정 기록</span>';
+ const label=`${name(g.a)} ${g.pa} : ${g.pb} ${name(g.b)}`;
+ return `<div class="game"><div><div class="muted small">${safe(g.date)}</div><strong>${label}</strong><div class="muted small">이닝 ${g.ia} : ${g.ib} · 승자 ${name(g.winner)}</div>${result}</div></div>`;
+}
+// 20정규경기 경험치/최근20경기 14승 자동 핸디업. 브라우저 저장 체험판.
+function ensureHandi(id){
+ const k=String(id);
+ if(!state.handiTrackers[k])state.handiTrackers[k]={afterGameId:Math.max(0,...confirmed().map(g=>Number(g.id)||0)),startedAt:new Date().toISOString()};
+ return state.handiTrackers[k];
+}
+function handiProgress(id){
+ const t=ensureHandi(id);
+ const played=confirmed().filter(g=>(g.a===id||g.b===id)&&Number(g.id)>Number(t.afterGameId||0)).sort((a,b)=>Number(a.id)-Number(b.id));
+ const last20=played.slice(-HANDI_GAMES);
+ const wins=last20.filter(g=>g.winner===id).length;
+ const isFull=last20.length===HANDI_GAMES;
+ const pts=last20.reduce((sum,g)=>sum+(g.a===id?Number(g.pa)||0:Number(g.pb)||0),0);
+ const inn=last20.reduce((sum,g)=>sum+(g.a===id?Number(g.ia)||0:Number(g.ib)||0),0);
+ return {played,playedCount:played.length,sample:last20,wins,losses:last20.length-wins,points:pts,innings:inn,avg:inn?pts/inn:0,xp:Math.min(100,played.length*HANDI_XP_PER_GAME),isFull,ready:isFull&&wins>=HANDI_WINS};
+}
+function applyHandiLevels(ids,gameId){
+ const grown=[];
+ for(const id of new Set(ids)){
+  const u=user(id);if(!u)continue;
+  const p=handiProgress(id);
+  if(!p.ready||u.handicap>=50)continue;
+  const previous=u.handicap;
+  u.handicap+=1;
+  state.handiLevelUps.push({memberId:id,from:previous,to:u.handicap,gameId,at:new Date().toISOString(),wins:p.wins,games:HANDI_GAMES,avg:p.avg});
+  state.handiTrackers[String(id)].afterGameId=gameId;
+  grown.push({name:u.name,previous,next:u.handicap,id});
+ }
+ return grown;
+}
+function handiCard(id){
+ const u=user(id),p=handiProgress(id);
+ const status=p.isFull?`승급까지 최근 20경기 중 ${Math.max(0,HANDI_WINS-p.wins)}승 더 필요해요. 승률이 충족될 때 자동 승급해요.`:`${HANDI_GAMES-p.playedCount}경기 더 완료하면 승급 조건을 평가해요.`;
+ const last=state.handiLevelUps.filter(x=>x.memberId===id).slice(-1)[0];
+ return `<section class="k2-handi-card" aria-label="내 핸디 레벨과 경험치"><div class="k2-handi-title"><h2>🎮 내 핸디 레벨</h2><button type="button" class="k2-handi-rule-btn" data-act="handi-rule">승급 규칙 보기 →</button></div>
+ <div class="k2-handi-level"><strong>LV.${u.handicap}</strong><span>현재 핸디 ${u.handicap}점 → 다음 ${Math.min(50,u.handicap+1)}점</span></div>
+ <div class="k2-handi-stage">정규 경기마다 +5 XP · 이벤트 경기 제외</div>
+ <div class="k2-handi-meter" role="progressbar" aria-label="경기 경험치" aria-valuenow="${p.xp}" aria-valuemin="0" aria-valuemax="100"><div class="k2-handi-fill" style="width:${p.xp}%"></div></div>
+ <div class="k2-handi-line"><span>경험치 <b>${p.xp}/100 XP</b></span><span>평가 완료 ${Math.min(HANDI_GAMES,p.playedCount)}/${HANDI_GAMES}경기</span></div>
+ <div class="k2-handi-minis"><div class="k2-handi-mini"><span>최근 최대 20경기</span><b>${p.wins}승 ${p.losses}패</b></div><div class="k2-handi-mini"><span>승급 필요 승수</span><b>${HANDI_WINS}승</b></div><div class="k2-handi-mini"><span>이 구간 AVG</span><b>${fmt(p.avg)}</b></div></div>
+ <div class="k2-handi-status">${p.isFull?'✨ 경험치 가득! ':''}${status}${last?' · 마지막 승급 '+safe(String(last.from))+' → '+safe(String(last.to))+'점':''}</div>
+ </section>`;
+}
+function handicapTierStats(){
+ const all=new Map();
+ for(const u of state.users)all.set(u.handicap,{handicap:u.handicap,matches:0,points:0,innings:0,wins:0});
+ for(const g of confirmed()){
+  for(const [id,level,point,inning] of [[g.a,g.handiA,g.pa,g.ia],[g.b,g.handiB,g.pb,g.ib]]){
+   if(!Number.isInteger(level)||!user(id))continue;
+   if(!all.has(level))all.set(level,{handicap:level,matches:0,points:0,innings:0,wins:0});
+   const v=all.get(level);v.matches++;v.points+=Number(point)||0;v.innings+=Number(inning)||0;if(g.winner===id)v.wins++;
+  }
+ }
+ return [...all.values()].sort((a,b)=>a.handicap-b.handicap);
+}
+function handySystemBulletinBody(){
+ const rows=handicapTierStats().map(r=>`<tr><td>${r.handicap}점</td><td>${r.matches}경기</td><td>${r.matches?(r.wins/r.matches*100).toFixed(1)+'%':'—'}</td><td>${r.innings?fmt(r.points/r.innings):'자료 없음'}</td></tr>`).join('');
+ return `<div class="k2-handi-rule-body"><p><strong>🏆 K2당구장 중대 3쿠션 핸디 레벨업 안내</strong></p>
+ <ol class="k2-handi-rule-list"><li>정규 경기 완료 시 <strong>+5 XP</strong> 적립 (20경기 = 100 XP)</li><li><strong>최근 20경기에서 14승 이상(70% 이상)</strong>이면 <strong>핸디 +1점 자동 레벨업</strong></li><li>20경기를 채우고 14승 미만이면, 다음 경기부터 최근 20경기를 다시 평가합니다.</li><li>레벨업 후 <strong>XP 0으로 초기화</strong>하고 새로운 20경기 도전을 시작합니다.</li><li><strong>게스트·이벤트·미확정 경기 제외</strong>, AVG는 참고 데이터로 표시합니다.</li><li>핸디 변경은 <strong>다음 경기부터 적용</strong>하며 과거 경기 점수는 변경되지 않습니다.</li></ol>
+ <p><strong>📊 K2당구장 핸디별 실제 기록</strong></p>
+ <div class="k2-handi-table-scroll"><table class="k2-handi-table"><thead><tr><th>경기 당시 핸디</th><th>정규 참가경기</th><th>승률</th><th>평균 AVG</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <p style="font-size:12px;color:#607f9c">이 표는 이 브라우저에서 <strong>핸디가 기록된 정규 경기</strong>만 집계합니다. 기존 경기 중 당시 핸디가 저장되지 않은 자료와 이벤트 경기는 제외됩니다. 전국 공인 중대 핸디별 AVG표가 아니며, 경기 수가 적으면 통계 변동이 큽니다.</p>
+ <p style="font-size:12px;color:#607f9c">⚠ 현재는 체험판으로 기기 내 기록만 반영됩니다. 여러 휴대폰에서 동일하게 자동 레벨업을 적용하려면 서버에 모든 회원의 경기 결과를 통합하고 권한 검증을 추가해야 합니다.</p></div>`;
+}
+function showLevelUp(grown){
+ if(!grown?.length)return;
+ const me=grown.find(x=>x.id===state.current)||grown[0];
+ document.getElementById('k2-levelup-message').innerHTML=`<b>${safe(me.name)}</b>님, 정규 20경기 도전 성공!<br><strong>핸디 ${me.previous} → ${me.next}점</strong><br>새로운 경험치 도전이 시작됐어요.`;
+ document.getElementById('k2-levelup-dialog').hidden=false;
+}
+function closeLevelUp(){document.getElementById('k2-levelup-dialog').hidden=true}
+document.getElementById('k2-levelup-ok').addEventListener('click',closeLevelUp);
+function scoreOfGames(games,id){
+ const wins=games.filter(g=>g.winner===id).length;
+ let points=0,innings=0;
+ for(const g of games){const first=g.a===id;points+=Number(first?g.pa:g.pb)||0;innings+=Number(first?g.ia:g.ib)||0}
+ return {games:games.length,wins,losses:games.length-wins,points,innings,avg:innings?points/innings:0,winRate:games.length?wins/games.length:0};
+}
+function monthlyInfo(id){
+ const mine=confirmed().filter(g=>(g.a===id||g.b===id)&&/^\d{4}-(0[1-9]|1[0-2])-\d{2}$/.test(String(g.date)));
+ const currentMonth=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}).slice(0,7);
+ const months=[...new Set([currentMonth,...mine.map(g=>g.date.slice(0,7))])].sort().reverse();
+ const choice=months.includes(state.monthView)?state.monthView:months[0];
+ const current=scoreOfGames(mine.filter(g=>g.date.slice(0,7)===choice),id);
+ const cumulative=scoreOfGames(mine.filter(g=>g.date.slice(0,7)<=choice),id);
+ return {months,choice,current,cumulative,mine};
+}
+function monthSummary(label,stats,isAccum){
+ return `<div class="month-mini ${isAccum?'month-accum':''}"><div class="month-mini-label"><span class="month-dot"></span>${label}</div><div class="month-primary">${stats.games}<small>경기</small></div><div class="month-kpis"><div><span>승 / 패</span><b>${stats.wins}승 ${stats.losses}패</b></div><div><span>승률</span><b>${(stats.winRate*100).toFixed(1)}%</b></div><div><span>AVG</span><b>${fmt(stats.avg)}</b></div><div><span>총 이닝</span><b>${stats.innings}</b></div></div></div>`;
+}
+function monthlyPanel(id){
+ const {months,choice,current,cumulative,mine}=monthlyInfo(id);
+ const rows=months.map(month=>{
+  const each=scoreOfGames(mine.filter(g=>g.date.slice(0,7)===month),id);
+  const total=scoreOfGames(mine.filter(g=>g.date.slice(0,7)<=month),id);
+  return `<tr class="${month===choice?'month-selected':''}"><td><button type="button" class="month-link" data-act="month-pick" data-month="${month}">${month.slice(0,4)}.${month.slice(5)}</button></td><td>${each.games}</td><td>${each.wins}승 ${each.losses}패</td><td>${fmt(each.avg)}</td><td class="month-total">${total.games}</td><td>${total.wins}승 ${total.losses}패</td><td class="month-total">${fmt(total.avg)}</td></tr>`;
+ }).join('');
+ return `<section class="card month-panel" aria-label="월별 누적 기록"><div class="month-top"><h2>월별 누적 기록</h2><label class="month-picker" for="month-select">조회 월<select id="month-select" aria-label="기록 조회 월">${months.map(m=>`<option value="${m}" ${m===choice?'selected':''}>${m.slice(0,4)}년 ${Number(m.slice(5))}월</option>`).join('')}</select></label></div><p class="month-description">선택한 달의 성적과 그 달까지의 누적 성적을 비교해 보세요.</p><div class="month-panels">${monthSummary('선택 월 기록',current,false)}${monthSummary('선택 월까지 누적',cumulative,true)}</div><div class="month-history-title">월별 기록표</div><div class="month-table-wrap" role="region" aria-label="월별 기록표, 가로 스크롤 가능" tabindex="0"><table class="month-table"><thead><tr><th>월</th><th>경기</th><th>승 / 패</th><th>AVG</th><th>누적 경기</th><th>누적 승 / 패</th><th>누적 AVG</th></tr></thead><tbody>${rows}</tbody></table></div><div class="month-help">월을 누르면 해당 월로 이동해요 · AVG는 총 득점 ÷ 총 이닝 · 저장 완료 경기만 집계</div></section>`;
+}
+function recentHomeGame(g,id){
+ const isA=g.a===id;
+ const opponent=isA?g.b:g.a;
+ const mine=isA?g.pa:g.pb;
+ const theirs=isA?g.pb:g.pa;
+ const won=g.winner===id;
+ const date=String(g.date||'').slice(5).replace('-','.');
+ return `<div class="home-recent-game">
+  <span class="home-recent-date">${safe(date)}</span>
+  <span class="home-result ${won?'win':'loss'}">${won?'승':'패'}</span>
+  <span class="home-recent-opponent">vs <strong>${name(opponent)}</strong></span>
+  <span class="home-recent-score"><b>${mine}</b><span> : </span>${theirs}</span>
+ </div>`;
+}
+
+/* 별도 게시판: 체험판 저장은 localStorage에만 적용됩니다. */
+let bulletinEditId=null;
+const bulletinItems=()=>[{id:HANDI_SYS_ID,title:'🎮 핸디별 데이터 · 자동 레벨업 안내',date:'2026-10-13',system:true,body:''},...state.bulletins.slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||Number(b.id)-Number(a.id))];
+function bulletinPreview(){
+ const first=state.bulletins.slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||Number(b.id)-Number(a.id))[0];
+ return `<section class="k2-bulletin-teaser" aria-label="공지사항"><div class="k2-bulletin-label"><span aria-hidden="true">📢</span> 공지사항 <span class="k2-bulletin-spacer"></span><button type="button" class="k2-bulletin-all" data-act="bulletin-all">전체보기 →</button></div><div class="k2-bulletin-main"><button type="button" class="k2-bulletin-feature" data-act="bulletin-open" data-id="${first?Number(first.id):0}"><strong>${first?safe(first.title):'등록된 공지사항이 없습니다.'}</strong><span>${first?safe(first.body).replace(/\s+/g,' ').slice(0,100):'전체보기에서 공지를 작성해 주세요.'}</span></button><span aria-hidden="true">›</span></div><button type="button" class="k2-bulletin-rule" data-act="handi-rule">🏆 핸디별 데이터 · 자동 레벨업 규칙 보기 →</button></section>`;
+}
+function bulletins(){
+ const bulletins=bulletinItems();
+ const edit=state.bulletins.find(b=>b.id===bulletinEditId);
+ return `<div class="k2-bulletin-page">
+ <div class="k2-bulletin-header"><h2>📢 공지사항</h2><button type="button" class="k2-bulletin-back" data-act="nav" data-tab="home">← 홈으로</button></div>
+ <div class="k2-bulletin-list">${bulletins.length?bulletins.map(b=>`<article class="k2-bulletin-entry ${state.bulletinOpenId===b.id?'active':''}"><button type="button" class="k2-bulletin-open" data-act="bulletin-open" data-id="${Number(b.id)}" aria-expanded="${state.bulletinOpenId===b.id}"><span><strong>${safe(b.title)}${b.system?' <small class="k2-system-chip">운영 규칙</small>':b.example?' <small class="muted">(예시)</small>':''}</strong><span class="k2-bulletin-entry-date">${safe(b.date||'')}</span></span><span aria-hidden="true">${state.bulletinOpenId===b.id?'⌃':'⌄'}</span></button>${state.bulletinOpenId===b.id?`<div class="k2-bulletin-body">${b.system?handySystemBulletinBody():safe(b.body)}</div>${b.system?'':`<div class="k2-bulletin-tools"><button type="button" data-act="bulletin-edit" data-id="${Number(b.id)}">수정</button><button type="button" data-act="bulletin-delete" data-id="${Number(b.id)}">삭제</button></div>`}`:''}</article>`).join(''):'<div class="empty">등록된 공지가 없습니다. 아래에서 새 공지를 작성해 주세요.</div>'}</div>
+ <div class="k2-bulletin-editor"><h3>${edit?'공지 수정':'새 공지 작성'} <small class="muted">· 체험판</small></h3><form id="bulletin-form"><label>제목<input name="title" maxlength="70" placeholder="예: 이번 주 운영 안내" value="${edit?safe(edit.title):''}" required></label><label>내용<textarea name="body" maxlength="1500" placeholder="회원에게 안내할 내용을 입력해 주세요." required>${edit?safe(edit.body):''}</textarea></label><button type="submit">${edit?'수정 저장':'공지 등록'}</button>${edit?'<button type="button" class="k2-cancel-edit" data-act="bulletin-cancel-edit">취소</button>':''}</form><p class="k2-bulletin-hint">현재는 이 브라우저에만 저장되는 체험 기능이에요. 다른 휴대폰에 전파되지 않으며, 관리자 계정·작성 권한은 실제 서버 연결 단계에서 적용해야 합니다.</p></div>
+ </div>`;
+}
+function home(){
+ const s=stat(state.current);
+ const recent=confirmed().filter(g=>g.a===state.current||g.b===state.current)
+  .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||Number(b.id)-Number(a.id)).slice(0,3);
+ return `${bulletinPreview()}${handiCard(state.current)}<div class="home-intro"><div><h2>내 기록 <small>${name(state.current)}님</small></h2><p>나의 경기 현황을 한눈에 확인하세요.</p></div><button type="button" class="home-play" data-act="nav" data-tab="live">🎱 경기 시작</button></div>
+ <div class="stats"><div class="stat"><span>총 경기</span><b>${s.games}</b></div><div class="stat"><span>승 / 패</span><b>${s.wins}/${s.losses}</b></div><div class="stat"><span>승률</span><b>${(s.winRate*100).toFixed(1)}%</b></div><div class="stat"><span>AVG</span><b>${fmt(s.avg)}</b></div></div>
+ <section class="card home-recent-panel" aria-label="내 최근 경기"><div class="row home-recent-title"><div><h2>내 최근 경기</h2><span class="muted small">완료된 경기 중 최신 3경기</span></div><button type="button" class="ghost" data-act="nav" data-tab="records">전체 보기 →</button></div>
+ ${recent.length?recent.map(g=>recentHomeGame(g,state.current)).join(''):'<div class="empty">아직 완료된 경기가 없습니다.</div>'}</section>
+  ${monthlyPanel(state.current)}
+  <section class="card guest-home-panel"><div class="row"><div><h3 style="margin:0 0 5px">🎉 내 이벤트 경기</h3><span class="muted small">${myEventGames().length}경기 · 정규 승률·AVG·순위에 미포함</span></div><button type="button" class="ghost" data-act="nav" data-tab="records">기록 보기 →</button></div></section>`;
+}
+
+function rankingTable(list){return `<div class="tablewrap"><table><thead><tr><th>순위</th><th>이름</th><th>전적</th><th>승률</th><th>AVG</th></tr></thead><tbody>${list.map((u,i)=>`<tr><td>${i+1}</td><td>${safe(u.name)}${u.id===state.current?' <span class="good">●</span>':''}</td><td>${u.wins}승 ${u.losses}패</td><td>${(u.winRate*100).toFixed(1)}%</td><td>${fmt(u.avg)}</td></tr>`).join('')}</tbody></table></div>`}
+function live(){
+ const L=state.live;
+ if(L&&L.a!==state.current&&L.b!==state.current){return `<div class="card"><h2>🎱 다른 회원의 진행 중인 경기</h2><div class="note">참가하지 않은 경기의 점수판과 이닝별 상세 기록은 볼 수 없습니다. 내 경기 내역에서 본인이 참가한 경기를 확인해 주세요.</div></div>`}
+ if(!L){
+   const guest=state.startMode==='guest';
+   const other=state.users.find(u=>u.id!==state.current);
+   const participants=guest?[user(state.current),{id:guestId,name:'게스트',handicap:20}]:state.users;
+   const choices=(selected)=>participants.map(u=>`<option value="${u.id}" ${selected===u.id?'selected':''}>${safe(u.name)}${u.id===guestId?' (이벤트)':' · '+u.handicap+'점'}</option>`).join('');
+   return `<div class="card start-match-panel"><h2>🎱 실시간 경기 시작</h2><p class="muted" style="margin:5px 0 13px">회원 경기와 이벤트 경기를 선택한 뒤, 공 색상과 선공을 자유롭게 정하세요.</p>
+   <div class="match-mode" role="group" aria-label="경기 종류 선택"><button type="button" class="match-mode-btn ${guest?'':'selected'}" data-act="match-mode" data-mode="member" aria-pressed="${!guest}">🏆 회원 경기</button><button type="button" class="match-mode-btn ${guest?'selected':''}" data-act="match-mode" data-mode="guest" aria-pressed="${guest}">🎉 게스트 경기</button></div>
+   <form id="live-start">
+     ${guest?`<div class="guest-inputs"><label class="field">게스트 이름<input name="guestName" id="live-guest-name" placeholder="예: 이벤트 참가자" maxlength="20" autocomplete="off" required></label><label class="field">게스트 핸디(목표점수)<input name="guestHandicap" id="live-guest-handicap" type="number" min="1" max="50" value="20" required></label></div><div class="guest-explain">🎉 이벤트 경기는 별도로 저장되며 정규 승률 · AVG · 순위 · 월별 통계에 포함되지 않아요.</div>`:''}
+     <div class="start-player-picks">
+       <label class="start-player-card start-yellow"><span class="start-player-heading"><span class="start-ball start-ball-yellow" aria-hidden="true"></span><strong>노란공 선수</strong></span><select name="yellow" id="live-yellow" required aria-label="노란공 선수">${choices(state.current)}</select></label>
+       <label class="start-player-card start-white"><span class="start-player-heading"><span class="start-ball start-ball-white" aria-hidden="true"></span><strong>흰공 선수</strong></span><select name="white" id="live-white" required aria-label="흰공 선수">${choices(guest?guestId:other?.id||state.current)}</select></label>
+     </div>
+    <div class="start-swap-row"><button class="start-swap" type="button" data-act="swap-players" aria-label="노란공과 흰공 선수 서로 바꾸기"><span aria-hidden="true">⇄</span> 선수 서로 바꾸기</button></div>
+    <fieldset class="start-first-field"><legend>첫 번째 공격 선수 (선공)</legend><div class="start-first-options">
+      <label class="start-first-choice"><input type="radio" name="first" value="yellow" checked><span><i class="start-ball start-ball-yellow" aria-hidden="true"></i><b>노란공 선공</b><small id="live-first-yellow-name">${name(state.current)}</small></span></label>
+      <label class="start-first-choice"><input type="radio" name="first" value="white"><span><i class="start-ball start-ball-white" aria-hidden="true"></i><b>흰공 선공</b><small id="live-first-white-name">${guest?'게스트':other?name(other.id):'상대 선택'}</small></span></label>
+    </div></fieldset>
+    <div class="start-note">ℹ️ ${guest?'게스트 경기':'회원 경기'} · 노란공·흰공 색상과 선공 여부는 별개예요.</div>
+    <button type="submit" class="primary start-begin">🎱 이 선수 구성으로 경기 시작</button>
+  </form></div>`;
+ }
+
+ const turn=L.turn,mine=turn===L.a?0:1,turnName=matchName(L,turn),now=L.points[mine];
+ const wins=L.scores[0]>=L.targets[0]||L.scores[1]>=L.targets[1];
+ const playerCards=[{id:L.a,score:L.scores[0],target:L.targets[0],inning:L.innings[0],high:L.highs[0],ball:'yellow'},{id:L.b,score:L.scores[1],target:L.targets[1],inning:L.innings[1],high:L.highs[1],ball:'white'}];
+ const renderPlayerCard=p=>`<div class="player-card k2-player-card ${p.ball==='yellow'?'yellow-side':'white-side'} ${turn===p.id?'current-turn '+(p.ball==='white'?'white-turn':''):'waiting-turn'}"><div class="name-row"><div class="player-name"><span class="player-dot ${p.ball==='yellow'?'player-yellow':'player-white'}"></span>${matchName(L,p.id)}</div><span class="turn-pill ${turn===p.id?'':'wait-pill'}">${turn===p.id?'● 공격 중':'대기'}</span></div><div class="scoreline"><span class="big-score ${p.ball==='yellow'?'yellow-text':'white-text'}">${p.score}</span><span class="target">/ ${p.target}</span></div><div class="statrow"><span>AVG <b>${fmt(p.inning?p.score/p.inning:0)}</b></span><span>하이런 <b>${p.high}</b></span></div></div>`;
+ const goal=L.goalPrompt;
+ const goalIdx=goal?(goal.player===L.a?0:1):-1;
+ const goalCurrent=goal?L.scores[goalIdx]+(goal.committed?0:L.points[goalIdx]):0;
+ const goalDialog=goal?`<div class="goal-overlay"><div class="goal-dialog" role="dialog" aria-modal="true" aria-labelledby="goal-dialog-title" aria-describedby="goal-dialog-description"><div class="goal-icon ${goalIdx===1?'white-ball':''}" aria-hidden="true">${goalIdx===0?'🟡':'⚪'}</div><span class="goal-tag">🎱 목표점수 도달!</span><h2 class="goal-title" id="goal-dialog-title">${matchName(L,goal.player)} 선수가 목표점수에 도달했어요!</h2><div class="goal-scores"><strong>${goalCurrent}</strong><span>/ ${L.targets[goalIdx]}점</span></div><p class="goal-description" id="goal-dialog-description">지금 경기를 종료할까요?<br>계속 진행해도 지금까지 점수는 유지됩니다.</p><div class="goal-buttons"><button type="button" class="goal-continue" data-act="live-goal-continue">계속 진행</button><button type="button" class="goal-end" data-act="live-goal-finish">경기 종료</button></div><div class="goal-footnote">${isGuestMatch(L)?'이벤트 경기로 별도 저장되며 정규 통계에는 반영되지 않아요.':'경기 종료 시 전적을 자동 저장하고 상대방에게 완료 알림을 남깁니다.'}</div></div></div>`:'';
+ const attackInning=L.innings[mine]+1;
+ const attackerBanner=`<div class="attacker-banner ${mine===1?'white-turn':''}" role="status" aria-live="polite"><div class="attacker-main"><span class="attacker-ball" aria-hidden="true"></span><div><div class="attacker-subtitle">지금 공격하는 선수</div><div class="attacker-name">${turnName} 공격 중</div></div></div><span class="attacker-inning">${attackInning}이닝</span></div>`;
+ const inningCard=`<div class="inning-panel"><div class="inning-label">이닝</div><div class="inning-value">${attackInning}</div><div class="inning-state">${turnName} 공격 중</div></div>`;
+ const scoreboardHTML=`${renderPlayerCard(playerCards[0])}${inningCard}${renderPlayerCard(playerCards[1])}`;
+ const roundA=L.history.filter(h=>h.p===L.a).map(h=>h.points);
+ const roundB=L.history.filter(h=>h.p===L.b).map(h=>h.points);
+ const roundCount=Math.max(roundA.length,roundB.length);
+ const scoreText=v=>v===undefined?'—':(v>0?'+':'')+v;
+ const hist=Array.from({length:roundCount},(_,i)=>{const round=roundCount-i;return `<tr><td>${round}</td><td>${scoreText(roundA[round-1])}</td><td>${scoreText(roundB[round-1])}</td></tr>`}).join('')||'<tr><td colspan="3" class="empty">아직 기록이 없습니다.</td></tr>';
+ return `<div class="card"><div class="row" style="margin-bottom:14px"><div><h2 style="margin:0">실시간 점수판</h2><span class="muted">노랑공 vs 흰공 · 총 ${L.history.length}차례 기록</span></div><span class="pill pending">${isGuestMatch(L)?'🎉 이벤트 경기':'경기 진행 중'}</span></div>${attackerBanner}<div class="scoreboard">${scoreboardHTML}</div>${wins?'<div class="note">목표 점수에 도달했어요. 계속 진행을 선택했다면 기록을 더 입력할 수 있습니다.</div>':''}</div><div class="card"><div class="turn-header"><div><h2 style="margin:0 0 8px">득점 입력</h2><p class="muted">+1 · +2로 득점을 누적하고, 0을 누르면 현재 점수를 기록한 뒤 상대 차례로 넘어갑니다.</p></div><div class="total-box"><span class="total-badge">이번 차례 누적</span><span class="turn-points">${now}점</span></div></div><div class="control-buttons"><button type="button" class="score-btn btn-minus" data-act="live-add" data-n="-1">-1</button><button type="button" class="score-btn btn-zero" data-act="live-commit" data-n="0"><span>0</span><span class="score-sub">차례 종료</span></button><button type="button" class="score-btn btn-plus1" data-act="live-add" data-n="1">+1</button><button type="button" class="score-btn btn-plus2" data-act="live-add" data-n="2">+2</button></div><div class="grid2" style="margin-top:14px"><button class="ghost" style="padding:16px" data-act="live-undo" ${L.history.length?'':'disabled'}>↩ 이전 차례 취소</button><button class="ghost" style="padding:16px" data-act="live-abandon">✕ 경기 취소</button></div></div><div class="card compact-record"><div class="row" style="margin-bottom:5px"><h3 style="margin:0">이닝별 득점 기록</h3><span class="muted small">최근 3이닝 · 스크롤</span></div><div class="inning-scroll" role="region" aria-label="전체 이닝별 득점 기록, 최근 이닝부터 표시" tabindex="0"><table class="inning-table"><thead><tr><th>이닝</th><th>🟡 ${matchName(L,L.a)}</th><th>⚪ ${matchName(L,L.b)}</th></tr></thead><tbody>${hist}</tbody></table></div></div>${goalDialog}`;
+}
+function liveRecalc(L){L.scores=[0,0];L.innings=[0,0];L.highs=[0,0];for(const h of L.history){const i=h.p===L.a?0:1;L.scores[i]+=h.points;L.innings[i]++;L.highs[i]=Math.max(L.highs[i],h.points)}L.turn=L.history.length?(L.history[L.history.length-1].p===L.a?L.b:L.a):L.first}
+function finalizeLiveGame(L,winner){
+   if(isGuestMatch(L)){
+     const eventId=Math.max(0,...state.events.map(g=>Number(g.id)||0))+1;
+     state.events.push({id:eventId,kind:'guest',memberId:state.current,guestName:L.guestName,a:L.a,b:L.b,pa:L.scores[0],pb:L.scores[1],ia:L.innings[0],ib:L.innings[1],hiA:L.highs[0],hiB:L.highs[1],winner,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),inningLog:[...L.history]});
+     state.live=null;state.tab='home';render();
+     flash('🎉 이벤트 경기 저장 완료! 정규 승률·AVG·순위에는 반영되지 않았어요.');
+     return;
+   }
+   const createdBy=state.current;
+   const gameId=Math.max(0,...state.games.map(g=>g.id))+1;
+   state.games.push({id:gameId,a:L.a,b:L.b,pa:L.scores[0],pb:L.scores[1],ia:L.innings[0],ib:L.innings[1],winner,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),status:'confirmed',createdBy,hiA:L.highs[0],hiB:L.highs[1],handiA:L.targets[0],handiB:L.targets[1],inningLog:[...L.history]});
+   const grown=applyHandiLevels([L.a,L.b],gameId);
+   const opponent=L.a===state.current?L.b:L.a;
+   // A single unread completion notice is assigned ONLY to the other participant.
+   if(opponent!==state.current){
+     state.notifications.push({id:Date.now().toString(36)+'-'+gameId,to:opponent,gameId,seen:false,createdAt:new Date().toISOString()});
+   }
+   state.live=null;state.tab='home';render();
+   flash(grown.length?'🏆 핸디 레벨업! '+grown.map(x=>x.name+' '+x.previous+'→'+x.next+'점').join(', '):'경기 종료 · 두 선수 기록 저장 완료! 상대방 완료 알림을 보관했습니다.');
+   if(grown.length)showLevelUp(grown);
+}
+function liveAction(act,el){
+ const L=state.live;
+ if(L&&L.a!==state.current&&L.b!==state.current)return;
+ if(act==='live-abandon'){if(!L)return;if(!confirm('진행 중인 경기 기록을 취소하시겠습니까?'))return;state.live=null;render();flash('진행 중인 경기를 취소했습니다.');return}
+ if(!L)return;
+ if(!Array.isArray(L.goalNotified))L.goalNotified=[false,false];
+ // 확인 창이 열려 있으면 경기 조작을 막습니다.
+ if(L.goalPrompt&&act!=='live-goal-continue'&&act!=='live-goal-finish')return;
+ if(act==='live-goal-continue'){
+   if(!L.goalPrompt)return;
+   L.goalPrompt=null;render();return;
+ }
+ if(act==='live-goal-finish'){
+   if(!L.goalPrompt)return;
+   const {player,committed}=L.goalPrompt;
+   if(!committed){
+     const i=player===L.a?0:1;
+     L.history.push({p:player,points:L.points[i]});
+     L.points=[0,0];liveRecalc(L);
+   }
+   finalizeLiveGame(L,player);return;
+ }
+ if(act==='live-add'){
+   const i=L.turn===L.a?0:1;
+   const before=L.scores[i]+L.points[i];
+   L.points[i]=Math.max(-999,Math.min(999,L.points[i]+Number(el.dataset.n)));
+   const after=L.scores[i]+L.points[i];
+   if(after<L.targets[i])L.goalNotified[i]=false;
+   if(before<L.targets[i]&&after>=L.targets[i]&&!L.goalNotified[i]){
+     L.goalNotified[i]=true;L.goalPrompt={player:L.turn,committed:false};
+   }
+   render();return;
+ }
+ if(act==='live-commit'){
+   const i=L.turn===L.a?0:1,player=L.turn;
+   const before=L.scores[i];
+   L.history.push({p:player,points:L.points[i]});L.points=[0,0];liveRecalc(L);
+   if(L.scores[i]<L.targets[i])L.goalNotified[i]=false;
+   if(before<L.targets[i]&&L.scores[i]>=L.targets[i]&&!L.goalNotified[i]){
+     L.goalNotified[i]=true;L.goalPrompt={player,committed:true};
+   }
+   render();return;
+ }
+ if(act==='live-undo'){
+   if(!L.history.length)return;
+   L.history.pop();L.points=[0,0];liveRecalc(L);
+   L.goalNotified=L.scores.map((score,i)=>score>=L.targets[i]&&L.goalNotified[i]);
+   render();flash('마지막 차례 기록을 취소했습니다.');return;
+ }
+}
+function eventRow(g){
+ const person=id=>id===guestId?safe(g.guestName):name(id);
+ const won=g.winner===g.memberId;
+ return `<div class="game"><div><div class="muted small">${safe(g.date)} · 🎉 이벤트 경기</div><strong>${person(g.a)} ${g.pa} : ${g.pb} ${person(g.b)}</strong><div class="muted small">${won?'승리':'패배'} · 이닝 ${g.ia} : ${g.ib} · 승자 ${person(g.winner)}</div><span class="pill event-pill">정규 통계 미포함</span></div></div>`;
+}
+function records(){const arr=myGames(),events=myEventGames();return `<div class="card"><h2>내 정규 경기 내역</h2><p class="muted small" style="margin:6px 0 14px">${name(state.current)}님이 참가한 정규 경기만 표시합니다. 다른 회원끼리 진행한 경기의 상세 기록은 볼 수 없습니다.</p>${arr.length?arr.map(g=>gameRow(g)).join(''):'<div class="empty">참가한 정규 경기 기록이 없습니다.</div>'}</div><section class="card guest-record-panel"><div class="row"><h2>🎉 내 이벤트 경기 내역</h2><span class="pill event-pill">정규 통계 제외</span></div><p class="muted small" style="margin:8px 0 12px">게스트와 진행한 경기는 이곳에만 별도로 저장됩니다. 회원 승률·AVG·순위·월별 기록에 포함되지 않습니다.</p>${events.length?events.map(eventRow).join(''):'<div class="empty">아직 이벤트 경기 기록이 없습니다.</div>'}</section>`}
+function ranking(){return `<div class="card"><h2>모임 순위표</h2><p class="muted" style="margin-bottom:14px">정렬: 승률 → 경기수 → 에버리지. 저장 완료된 경기만 계산합니다.</p>${rankingTable(ranks())}</div><div class="card"><h2>선수 목록</h2>${state.users.map(u=>`<div class="game"><div><strong>${safe(u.name)}</strong> <span class="muted">· 핸디 ${u.handicap}점</span></div><div class="muted small">${stat(u.id).games}경기</div></div>`).join('')}</div><div class="card"><h2>체험용 회원 추가</h2><form id="addform" class="grid2"><label class="field">별명<input name="name" maxlength="20" required placeholder="예: 동호"></label><label class="field">핸디<input type="number" name="handicap" min="1" max="50" value="20" required></label><div><button class="primary">회원 추가</button></div></form><p class="muted small">이 화면의 회원은 이 브라우저에만 추가됩니다.</p></div>`}
+function render(){if(!activeProfile()){showGate();return}const tabs=[['home','🏠 홈'],['live','🎱 실시간 점수'],['records','내 경기 내역'],['ranking','회원·순위']];$('#account-button').textContent=name(state.current)+' · 로그아웃';$('#memberCount').textContent=`회원 ${state.users.length}명 · 확정 ${confirmed().length}경기`;$('#tabs').innerHTML=tabs.map(([id,title])=>`<button class="tab ${state.tab===id?'active':''}" data-act="nav" data-tab="${id}">${title}</button>`).join('');$('#view').innerHTML=({home,live,records,ranking,bulletins}[state.tab]||home)();save();refreshNoticeBadge();if(state.live?.goalPrompt){document.querySelector('.goal-end')?.focus()}}
+function updateFirstPickLabels(){
+ const yellow=document.getElementById('live-yellow'),white=document.getElementById('live-white');if(!yellow||!white)return;
+ const yn=document.getElementById('live-first-yellow-name'),wn=document.getElementById('live-first-white-name');
+ if(yn)yn.textContent=Number(yellow.value)===guestId?($('#live-guest-name')?.value.trim()||'게스트'):(user(Number(yellow.value))?.name||'선수 선택');
+ if(wn)wn.textContent=Number(white.value)===guestId?($('#live-guest-name')?.value.trim()||'게스트'):(user(Number(white.value))?.name||'선수 선택');
+}
+document.addEventListener('change',e=>{if(e.target.id==='auth-member'){authFields()}else if(e.target.id==='month-select'){state.monthView=e.target.value;render()}else if(e.target.id==='live-yellow'||e.target.id==='live-white'){updateFirstPickLabels()}});document.addEventListener('input',e=>{if(e.target.id==='live-guest-name')updateFirstPickLabels()});document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el)return;const act=el.dataset.act;if(act==='auth-logout'){logoutAuth();return}if(act==='bio-info'){showBioInfo();return}if(!activeProfile())return;if(act==='notice-confirm'){confirmNotice();return}if(act==='notice-open'){openNextNotice();if(!unreadFor(Number(auth.sessionId)).length)flash('확인하지 않은 경기 완료 알림이 없습니다.');return}if(act==='handi-rule'){state.tab='bulletins';state.bulletinOpenId=HANDI_SYS_ID;bulletinEditId=null;render();window.scrollTo(0,0);return}if(act==='bulletin-all'){state.tab='bulletins';state.bulletinOpenId=bulletinItems()[0]?.id??null;bulletinEditId=null;render();window.scrollTo(0,0);return}
+if(act==='bulletin-open'){const id=Number(el.dataset.id);const onPage=state.tab==='bulletins';state.tab='bulletins';state.bulletinOpenId=onPage&&state.bulletinOpenId===id?null:id;bulletinEditId=null;render();if(state.bulletinOpenId===id&&e.target.closest('.k2-bulletin-feature'))window.scrollTo(0,0);return}
+if(act==='bulletin-edit'){const id=Number(el.dataset.id);if(!state.bulletins.some(b=>b.id===id))return;bulletinEditId=id;state.bulletinOpenId=id;render();document.querySelector('#bulletin-form input')?.focus();return}
+if(act==='bulletin-cancel-edit'){bulletinEditId=null;render();return}
+if(act==='bulletin-delete'){const id=Number(el.dataset.id);const item=state.bulletins.find(b=>b.id===id);if(!item)return;if(!confirm('이 공지사항을 삭제할까요?'))return;state.bulletins=state.bulletins.filter(b=>b.id!==id);if(state.bulletinOpenId===id)state.bulletinOpenId=null;if(bulletinEditId===id)bulletinEditId=null;render();flash('공지사항을 삭제했습니다.');return}
+if(act==='match-mode'){if(state.live)return;state.startMode=el.dataset.mode==='guest'?'guest':'member';render();return}if(act==='swap-players'){
+ const yellow=document.getElementById('live-yellow'),white=document.getElementById('live-white');if(!yellow||!white)return;
+ const previous=yellow.value;yellow.value=white.value;white.value=previous;updateFirstPickLabels();return;
+}if(act==='toggle-menu'){const open=document.body.classList.toggle('focus-menu-open');el.setAttribute('aria-expanded',String(open));return}if(act==='month-pick'){state.monthView=el.dataset.month;render();return}if(act.startsWith('live-')){liveAction(act,el);return}if(act==='nav'){state.tab=el.dataset.tab;document.body.classList.remove('focus-menu-open');render();return}});
+document.addEventListener('submit',e=>{if(e.target.id==='auth-form'){submitAuth(e);return}if(!activeProfile()){e.preventDefault();showGate();return}if(e.target.id==='bulletin-form'){e.preventDefault();const f=new FormData(e.target);const title=String(f.get('title')||'').trim(),body=String(f.get('body')||'').trim();if(!title||title.length>70||!body||body.length>1500)return flash('공지 제목과 내용을 확인해 주세요.','alert');let id=bulletinEditId;if(id!==null){const b=state.bulletins.find(b=>b.id===id);if(!b)return flash('수정할 공지를 찾을 수 없습니다.','alert');b.title=title;b.body=body;b.example=false;}else{id=Math.max(0,...state.bulletins.map(b=>Number(b.id)||0))+1;state.bulletins.push({id,title,body,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),example:false});}state.bulletinOpenId=id;bulletinEditId=null;render();flash('공지사항이 저장되었습니다.');return}
+if(e.target.id==='live-start'){e.preventDefault();if(state.live)return flash('먼저 진행 중인 경기를 종료하거나 취소해 주세요.','alert');const f=new FormData(e.target),a=Number(f.get('yellow')),b=Number(f.get('white')),guest=state.startMode==='guest';
+  if(a===b)return flash('노란공과 흰공 선수를 서로 다르게 선택해 주세요.','alert');
+  if(a!==state.current&&b!==state.current)return flash('본인이 참가하는 경기를 선택해 주세요.','alert');
+  let guestName='',guestHandicap=0;
+  if(guest){
+    if(!((a===guestId&&b===state.current)||(b===guestId&&a===state.current)))return flash('본인과 게스트를 각각 선택해 주세요.','alert');
+    guestName=String(f.get('guestName')||'').trim();guestHandicap=Number(f.get('guestHandicap'));
+    if(!guestName||guestName.length>20)return flash('게스트 이름을 1~20자로 입력해 주세요.','alert');
+    if(!Number.isInteger(guestHandicap)||guestHandicap<1||guestHandicap>50)return flash('게스트 핸디는 1~50점 사이로 입력해 주세요.','alert');
+  }else if(!user(a)||!user(b))return flash('등록된 회원을 선택해 주세요.','alert');
+  const first=f.get('first')==='white'?b:a;
+  state.live={kind:guest?'guest':'member',guestName,a,b,first,turn:first,targets:[a===guestId?guestHandicap:user(a).handicap,b===guestId?guestHandicap:user(b).handicap],scores:[0,0],innings:[0,0],highs:[0,0],points:[0,0],history:[],goalNotified:[false,false],goalPrompt:null};render();window.scrollTo(0,0);flash(guest?'🎉 게스트 이벤트 경기를 시작했어요. 정규 통계에는 포함되지 않습니다.':'경기를 시작했습니다. 현재 공격 선수의 득점을 입력하세요.');return}if(e.target.id==='addform'){e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')||'').trim(),handicap=Number(f.get('handicap'));if(!name||handicap<1||handicap>50||state.users.some(u=>u.name===name))return flash('별명 또는 핸디를 확인해주세요.','alert');const id=Math.max(0,...state.users.map(u=>u.id))+1;state.users.push({id,name,handicap});ensureHandi(id);render();flash(name+'님이 체험용 명단에 추가되었습니다.')}});
+if(activeProfile()){enterApp(Number(auth.sessionId))}else{showGate()}})();
+</script></body></html>
