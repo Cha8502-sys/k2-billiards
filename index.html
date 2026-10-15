@@ -960,6 +960,7 @@ body.auth-view{overflow:auto!important; min-height:100dvh!important}
   #view:has(.scoreboard) .inning-value{font-size:clamp(30px,5vw,42px);margin:4px 0}
   #view:has(.scoreboard) .inning-state{font-size:10px}
 }
+ .cloud-hide{display:none!important} #auth-new-toggle[hidden],#auth-member-label[hidden]{display:none!important}
 </style></head><body class="auth-view"><section class="auth-screen" id="auth-gate" aria-label="K2당구장 회원 시작"><div class="auth-card">
 <div class="auth-logo"><span class="auth-ball-set"><i></i><i></i><i></i></span>K2당구장</div>
 <p class="auth-intro">PIN이나 비밀번호 없이 내 이름으로 시작하세요.<br>같은 기기에서는 다음부터 자동으로 접속해요.</p>
@@ -977,8 +978,8 @@ body.auth-view{overflow:auto!important; min-height:100dvh!important}
 <button class="auth-primary" type="submit" id="auth-submit" disabled>이름을 선택해 주세요</button></form>
 <div class="auth-device-line"><span class="auth-fingerprint">☝️</span><span>지문·얼굴 인증은 정식 앱에서 기기 인증과 연결할 예정이에요.</span></div>
 <button class="auth-mini-btn" type="button" id="auth-bio-gate">생체인식 적용 방식 보기 ↗</button>
-<div class="auth-note">📱 체험판: 이름과 자동 접속 상태는 이 브라우저에만 보관돼요. 서버 인증이 없으므로 다른 회원의 계정·기록을 안전하게 보호하지는 못합니다.</div>
-</div></section><div class="page" id="app-page" hidden><header><div class="brand-title"><div class="brand-balls"><span class="brand-ball ball-yellow"></span><span class="brand-ball ball-red"></span><span class="brand-ball ball-white"></span></div><h1>K2당구장</h1></div><div class="flex"><button type="button" class="focus-menu-btn" data-act="toggle-menu" aria-expanded="false">☰ 메뉴</button><span class="tag">체험판 · 기기 내 저장</span><button type="button" class="k2-notification-btn" data-act="notice-open" title="내 경기 완료 알림">🔔 완료 알림 <span class="k2-notification-count" id="k2-notice-count" hidden>0</span></button><button type="button" class="auth-bio-btn" data-act="bio-info">☝️ 생체인식 안내</button><button type="button" class="auth-account" data-act="auth-logout" title="로그아웃 또는 다른 회원 선택" id="account-button">내 계정</button></div></header><div class="banner"><div class="muted" style="color:#e1b96c">3쿠션 전적 공유 체험</div><div class="row"><strong>K2당구장 경기 기록</strong><span class="small" id="memberCount"></span></div><p class="muted">실시간 경기 종료 시 자동 저장하고, 상대방에게 완료 알림을 남깁니다.</p></div><nav class="tabs" id="tabs"></nav><div id="alert" class="alert"></div><div id="success" class="success"></div><main id="view"></main><div class="foot">경기 완료 알림은 체험판 내에서만 확인할 수 있습니다 · 실제 상대방 휴대폰 푸시 알림은 서버 연결 후 지원</div></div>
+<div class="auth-note">📱 익명 로그인 시험판: 브라우저 데이터 삭제·로그아웃 시 계정 복구가 어려워요. 누구나 가입할 수 있는 상태이므로 초대·승인 기능을 넣기 전에는 공개 배포에 주의해 주세요.</div>
+</div></section><div class="page" id="app-page" hidden><header><div class="brand-title"><div class="brand-balls"><span class="brand-ball ball-yellow"></span><span class="brand-ball ball-red"></span><span class="brand-ball ball-white"></span></div><h1>K2당구장</h1></div><div class="flex"><button type="button" class="focus-menu-btn" data-act="toggle-menu" aria-expanded="false">☰ 메뉴</button><span class="tag">서버 연동 시험판</span><button type="button" class="k2-notification-btn" data-act="notice-open" title="내 경기 완료 알림">🔔 완료 알림 <span class="k2-notification-count" id="k2-notice-count" hidden>0</span></button><button type="button" class="auth-bio-btn" data-act="bio-info">☝️ 생체인식 안내</button><button type="button" class="auth-account" data-act="auth-logout" title="로그아웃 또는 다른 회원 선택" id="account-button">내 계정</button></div></header><div class="banner"><div class="muted" style="color:#e1b96c">3쿠션 서버 연동 시험</div><div class="row"><strong>K2당구장 경기 기록</strong><span class="small" id="memberCount"></span></div><p class="muted">회원 경기 점수는 서버에 저장되며 참여 회원 휴대폰에 몇 초 간격으로 동기화됩니다.</p></div><nav class="tabs" id="tabs"></nav><div id="alert" class="alert"></div><div id="success" class="success"></div><div id="cloud-status" role="status" style="border-radius:10px;background:#d9f6ef;color:#184f68;padding:6px 12px;margin:0 0 10px;font-size:12px">서버 연결 확인 중...</div><main id="view"></main><div class="foot">회원 경기 점수·전적은 서버에 저장합니다. 이벤트 경기·공지·알림은 현재 기기에만 저장됩니다.</div></div>
 <div id="k2-complete-dialog" class="k2-notice-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="k2-complete-title"><div class="k2-notice-card">
 <span class="k2-notice-status">✓ 경기 완료</span><div class="k2-notice-emoji">🎱</div><h2 id="k2-complete-title">경기가 종료되었습니다!</h2>
 <p class="k2-notice-date" id="k2-complete-date"></p><div class="k2-notice-scores" id="k2-complete-scores"></div>
@@ -990,14 +991,15 @@ body.auth-view{overflow:auto!important; min-height:100dvh!important}
 <div id="bio-info-dialog" class="auth-info-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="bio-info-title"><div class="auth-info-box">
 <div style="font-size:35px">☝️</div><h2 id="bio-info-title">생체인식 로그인 적용 안내</h2>
 <p>정식 K2당구장 앱에서는 최초 계정 등록 후 <b>패스키(Passkey)</b>를 연결해, 필요할 때 갤럭시 지문·얼굴·기기 잠금으로 본인을 확인하는 방식으로 만들 계획이에요.</p>
-<p>지금 체험판에서는 서버가 연결되지 않았기 때문에 실제 생체인식 등록이나 인증은 실행하지 않아요. 대신 같은 브라우저에서 자동 접속 흐름을 시험할 수 있어요.</p>
+<p>현재 서버 익명 로그인을 사용하지만 실제 패스키·생체인식 등록은 아직 지원하지 않아요.</p>
 <div class="auth-support" id="bio-support-result">아래에서 현재 브라우저의 생체인식 지원 가능 여부를 확인해 보세요.</div>
 <button id="bio-support-check" type="button" style="background:#e9f3ff">이 기기 지원 여부 확인</button>
 <button id="bio-info-close" type="button">확인</button>
 </div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
 (()=>{
-'use strict';const KEY='billiards_demo_v1';const seed={live:null,current:1,tab:'home',users:[{id:1,name:'철수',handicap:22},{id:2,name:'영호',handicap:20},{id:3,name:'민수',handicap:18},{id:4,name:'준호',handicap:24}],games:[{id:101,a:1,b:2,pa:22,pb:17,ia:30,ib:30,winner:1,date:'2026-10-08',status:'confirmed',createdBy:1},{id:102,a:2,b:3,pa:20,pb:14,ia:32,ib:32,winner:2,date:'2026-10-09',status:'confirmed',createdBy:2},{id:103,a:3,b:1,pa:18,pb:17,ia:28,ib:28,winner:3,date:'2026-10-10',status:'confirmed',createdBy:3},{id:104,a:1,b:4,pa:22,pb:19,ia:35,ib:35,winner:1,date:'2026-10-12',status:'pending',createdBy:1}]};let state;try{const stored=JSON.parse(localStorage.getItem(KEY));state=stored&&Array.isArray(stored.users)&&Array.isArray(stored.games)?stored:structuredClone(seed)}catch(_){state=structuredClone(seed)};if(!state.live)state.live=null;else{state.live.goalNotified=Array.isArray(state.live.goalNotified)?state.live.goalNotified:[false,false];state.live.goalPrompt=state.live.goalPrompt||null}
+'use strict';const KEY='k2_cloud_cache_v1';const seed={live:null,current:null,tab:'home',users:[],games:[]};let state;try{const stored=JSON.parse(localStorage.getItem(KEY));state=stored&&Array.isArray(stored.users)&&Array.isArray(stored.games)?stored:structuredClone(seed)}catch(_){state=structuredClone(seed)};if(!state.live)state.live=null;else{state.live.goalNotified=Array.isArray(state.live.goalNotified)?state.live.goalNotified:[false,false];state.live.goalPrompt=state.live.goalPrompt||null}
 if(!Array.isArray(state.notifications))state.notifications=[];
 if(!Array.isArray(state.bulletins))state.bulletins=[{id:1,title:'K2당구장 공지사항 안내',body:'당구장 일정, 친선대회 및 휴무 안내 등을 이곳에서 확인하실 수 있습니다.\n\n이 글은 화면을 확인하기 위한 예시 공지입니다. 공지사항 페이지에서 실제 내용을 작성하거나 이 글을 삭제해 주세요.',date:'2026-10-13',example:true}];
   if(!Array.isArray(state.events))state.events=[];
@@ -1013,33 +1015,167 @@ for(const u of state.users){
  if(!state.handiTrackers[k])state.handiTrackers[k]={afterGameId:oldMaxGame,startedAt:new Date().toISOString()};
 }
 const $=sel=>document.querySelector(sel);const safe=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const user=id=>state.users.find(x=>x.id===id);const name=id=>safe(user(id)?.name||'알 수 없음');const fmt=n=>Number.isFinite(n)?n.toFixed(3):'0.000';const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(_){}};function flash(message,kind='success'){$('#alert').style.display='none';$('#success').style.display='none';$('#'+kind).textContent=message;$('#'+kind).style.display='block';setTimeout(()=>{$('#'+kind).style.display='none'},3500)};
-// K2 device session preview: no PIN, no password, no server-side identity verification.
-// Actual user authentication and passkeys must be implemented with an HTTPS backend.
-const AUTH_KEY='k2_billiards_device_demo_v1';
-let auth={profiles:{},sessionId:null};
-try{
- const val=JSON.parse(localStorage.getItem(AUTH_KEY));
- if(val&&typeof val==='object'&&val.profiles&&typeof val.profiles==='object')auth={profiles:val.profiles,sessionId:val.sessionId??null};
-}catch(_){ }
-// Keep the same selected member when moving from the earlier PIN preview on this device.
-if(!auth.sessionId){
- try{
-  const legacy=JSON.parse(localStorage.getItem('k2_billiards_pin_demo_v1'));
-  const previous=Number(legacy?.sessionId);
-  if(previous&&legacy?.profiles?.[String(previous)]&&user(previous)){
-   auth.profiles[String(previous)]={joinedAt:new Date().toISOString(), migrated:true};
-   auth.sessionId=previous;
-  }
- }catch(_){ }
-}
-const storeAuth=()=>{try{localStorage.setItem(AUTH_KEY,JSON.stringify(auth))}catch(_){}};
+ // Verified identity comes from Supabase anonymous sign-in, not a chosen member name.
+ const AUTH_KEY='k2_cloud_device_session_v1';
+ let auth={profiles:{},sessionId:null};
+ const storeAuth=()=>{try{localStorage.setItem(AUTH_KEY,JSON.stringify(auth))}catch(_){}};
+
+ // --- K2 CLOUD: public project URL + publishable key (never service_role/secret) ---
+ const K2_URL='https://sfvcbcbqhmcdzqngoahs.supabase.co';
+ const K2_PUBLIC_KEY='sb_publishable_6TEMv47AJ1lReb4d454o6A_YAQ0VYXk';
+ const db=window.supabase?.createClient(K2_URL,K2_PUBLIC_KEY,{
+    auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}
+ });
+ let cloudUser=null, myMemberUuid=null, cloudBusy=false, cloudSyncing=false;
+ let lastEditAt=0, lastSaveAt=0, cloudQueue=Promise.resolve(), cloudNotifyErrorAt=0;
+ const remoteIds=new Map(), numericIds=new Map();
+ const makeId=uuid=>parseInt(uuid.replace(/-/g,'').slice(0,12),16); // stable safe integer
+ function memberNum(uuid){
+   if(!uuid)return 0;
+   if(remoteIds.has(uuid))return remoteIds.get(uuid);
+   const numeric=makeId(uuid);
+   remoteIds.set(uuid,numeric);numericIds.set(numeric,uuid);return numeric;
+ }
+ const memberUuid=num=>numericIds.get(Number(num));
+ const k2Today=iso=>new Date(iso||Date.now()).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'});
+ const isOurGame=row=>row.player1_id===myMemberUuid||row.player2_id===myMemberUuid;
+ function syncMessage(text,isError=false){
+   let node=document.getElementById('cloud-status');
+   if(!node)return;
+   node.textContent=text;
+   node.style.color=isError?'#ad294b':'#184f68';
+   node.style.background=isError?'#ffebef':'#d9f6ef';
+ }
+ const cleanLive=L=>{const copy=JSON.parse(JSON.stringify(L));delete copy.remoteId;return copy};
+ function asCloudMatch(row){
+   const L=row.live_state||{};
+   const a=memberNum(row.player1_id),b=memberNum(row.player2_id);
+   return {id:new Date(row.played_at||Date.now()).getTime()+(makeId(row.id)%1000)/1000,
+     uuid:row.id,a,b,pa:row.player1_score||0,pb:row.player2_score||0,
+     ia:L.innings?.[0]??row.innings??0,ib:L.innings?.[1]??row.innings??0,
+     hiA:L.highs?.[0]??0,hiB:L.highs?.[1]??0,
+     winner:L.winner?memberNum(L.winner):((row.player1_score||0)===(row.player2_score||0)?null:((row.player1_score||0)>(row.player2_score||0)?a:b)),
+     date:k2Today(row.played_at),status:row.status==='confirmed'?'confirmed':'pending',
+     handiA:L.targets?.[0]??user(a)?.handicap??20,
+     handiB:L.targets?.[1]??user(b)?.handicap??20,
+     inningLog:Array.isArray(L.history)?L.history.map(h=>({p:memberNum(h.p),points:h.points})):[],
+     createdBy:a};
+ }
+ function getLiveFromRow(row){
+   const L=row.live_state;
+   if(!L||!Array.isArray(L.history)||!Array.isArray(L.targets))return null;
+   const v={...L,a:memberNum(row.player1_id),b:memberNum(row.player2_id),
+       first:memberNum(L.first),turn:memberNum(L.turn),remoteId:row.id,
+       history:L.history.map(h=>({p:memberNum(h.p),points:h.points})),
+       goalPrompt:L.goalPrompt?{...L.goalPrompt,player:memberNum(L.goalPrompt.player)}:null};
+   return v;
+ }
+ function cloudLivePayload(L){
+   const c=cleanLive(L);
+   c.a=memberUuid(L.a);c.b=memberUuid(L.b);
+   c.first=memberUuid(L.first);c.turn=memberUuid(L.turn);
+   c.history=(L.history||[]).map(h=>({p:memberUuid(h.p),points:h.points}));
+   if(c.goalPrompt)c.goalPrompt.player=memberUuid(c.goalPrompt.player);
+   return c;
+ }
+ async function pullCloud(showError=false){
+   if(!db||!cloudUser||cloudSyncing)return;
+   cloudSyncing=true;
+   try{
+     // Signed-in group members may see the member directory and completed matches.
+     const mem=await db.from('members').select('id,name,handicap,created_at').order('created_at');
+     if(mem.error)throw mem.error;
+     const mine=(mem.data||[]).find(m=>m.id===myMemberUuid);
+     if(!mine){syncMessage('회원 등록을 완료해 주세요',true);return}
+     myMemberUuid=mine.id;
+     state.users=(mem.data||[]).map(m=>({id:memberNum(m.id),name:m.name,handicap:m.handicap}));
+     state.current=memberNum(mine.id);
+     for(const m of state.users)ensureHandi(m.id);
+     const result=await db.from('matches').select('id,player1_id,player2_id,player1_score,player2_score,innings,status,played_at,live_state').order('played_at',{ascending:false}).limit(500);
+     if(result.error)throw result.error;
+     const rows=result.data||[];
+     state.games=rows.filter(r=>r.status==='confirmed').map(asCloudMatch);
+     const ongoing=rows.find(r=>r.status==='in_progress'&&isOurGame(r));
+     if(ongoing&&Date.now()-lastEditAt>6000){
+        const newer=getLiveFromRow(ongoing);
+        if(newer)state.live=newer;
+     } else if(!ongoing&&state.live?.kind==='member'&&state.live.remoteId&&Date.now()-lastEditAt>6000){
+       state.live=null;
+     }
+     syncMessage('● 서버 연결됨 · 약 5초 간격 동기화');
+     if(activeProfile()&&!cloudBusy&&state.tab!=='bulletins'&&(state.tab!=='live'||Boolean(state.live)))render();
+   }catch(error){
+     console.error('K2 cloud sync error',error);
+     if(showError||Date.now()-cloudNotifyErrorAt>25000){
+       syncMessage('서버 동기화 오류 · 추가 SQL 설정을 확인해 주세요',true);
+       cloudNotifyErrorAt=Date.now();
+     }
+   }finally{cloudSyncing=false}
+ }
+ async function startCloud(){
+   if(!db){showGate();$('#auth-error').textContent='서버 연결 프로그램을 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침해 주세요.';return}
+   try{
+     const {data,error}=await db.auth.getUser();
+     if(error||!data?.user){showGate();return}
+     cloudUser=data.user;
+     const lookup=await db.from('members').select('id,name,handicap').eq('auth_user_id',cloudUser.id).maybeSingle();
+     if(lookup.error)throw lookup.error;
+     if(!lookup.data){showGate();return}
+     myMemberUuid=lookup.data.id;
+     memberNum(lookup.data.id);
+     await pullCloud(true);
+     // Own row is always readable with the existing member_self_read policy.
+     if(!state.users.some(m=>m.id===memberNum(lookup.data.id))){
+       state.users.push({id:memberNum(lookup.data.id),name:lookup.data.name,handicap:lookup.data.handicap});
+     }
+     enterApp(memberNum(lookup.data.id));
+     setInterval(()=>{if(cloudUser&&!cloudBusy)pullCloud()},5000);
+   }catch(error){showGate();$('#auth-error').textContent='접속을 확인하지 못했어요: '+String(error.message||error).slice(0,130)}
+ }
+ async function cloudCreate(L){
+   if(!db||!memberUuid(L.a)||!memberUuid(L.b))throw new Error('상대방이 아직 서버에 등록되지 않았어요.');
+   const payload=cloudLivePayload(L);
+   const {data,error}=await db.from('matches').insert({
+     player1_id:memberUuid(L.a),player2_id:memberUuid(L.b),player1_score:0,player2_score:0,
+     innings:0,status:'in_progress',live_state:payload
+   }).select('id').single();
+   if(error)throw error;
+   return data.id;
+ }
+ function cloudSaveLive(L){
+   if(!L||L.kind!=='member'||!L.remoteId||!db)return;
+   lastEditAt=Date.now();
+   const id=L.remoteId, payload=cloudLivePayload(L),
+     scores=[L.scores[0]+L.points[0],L.scores[1]+L.points[1]],inning=Math.max(...L.innings);
+   cloudQueue=cloudQueue.catch(()=>{}).then(async()=>{
+     const {error}=await db.from('matches').update({player1_score:scores[0],player2_score:scores[1],innings:inning,live_state:payload}).eq('id',id);
+     if(error)throw error;
+     lastSaveAt=Date.now();syncMessage('● 점수 서버 저장 완료 · 다른 기기에 동기화');
+   }).catch(err=>{
+     console.error('Score save failed:',err);
+     syncMessage('⚠ 점수 서버 저장 실패: '+String(err.message||err).slice(0,90),true);
+   });
+ }
+ async function cloudFinish(L,winner){
+   if(!L.remoteId)throw new Error('서버에 경기 ID가 없어요.');
+   await cloudQueue;
+   const payload=cloudLivePayload(L);
+   payload.winner=memberUuid(winner);
+   const {error}=await db.from('matches').update({
+     player1_score:L.scores[0],player2_score:L.scores[1],innings:Math.max(...L.innings),
+     status:'confirmed',live_state:payload
+   }).eq('id',L.remoteId);
+   if(error)throw error;
+   // 다음 정기 동기화에서 모든 기기에 확정 결과가 반영됩니다.
+ }
+ // ---------- end K2 cloud ----------
 let newMemberMode=false;
-const activeProfile=()=>Boolean(auth.sessionId&&auth.profiles[String(auth.sessionId)]&&user(Number(auth.sessionId)));
-function showGate(){
- document.body.classList.add('auth-view');$('#auth-gate').hidden=false;$('#app-page').hidden=true;
- $('#auth-member').innerHTML='<option value="">이름을 선택해 주세요</option>'+state.users.map(u=>`<option value="${u.id}">${safe(u.name)} · 핸디 ${u.handicap}점</option>`).join('');
- $('#auth-member').value='';newMemberMode=false;authFields();window.scrollTo(0,0);
-}
+ const activeProfile=()=>Boolean(cloudUser&&myMemberUuid&&state.current&&user(state.current));
+ function showGate(){
+   document.body.classList.add('auth-view');$('#auth-gate').hidden=false;$('#app-page').hidden=true;
+   newMemberMode=true;$('#auth-new-toggle').hidden=true;$('#auth-member-label').hidden=true;
+   authFields();window.scrollTo(0,0);
+ }
 function authFields(){
  const id=Number($('#auth-member').value),u=user(id);
  const a=$('#auth-new-name');
@@ -1050,11 +1186,11 @@ function authFields(){
  $('#auth-new-toggle').setAttribute('aria-expanded',String(newMemberMode));
  $('#auth-inputs').innerHTML='';
  if(newMemberMode){
-  $('#auth-step').textContent='새 회원 등록';
-  $('#auth-heading').textContent='내 이름 등록하기';
-  $('#auth-description').textContent='이름과 핸디만 입력하면 바로 사용할 수 있어요.';
-  $('#auth-inputs').innerHTML='<div class="auth-mode-note">🔔 이름을 등록해도 아직 서버 인증이 없어 본인 확인이 되지는 않아요.</div>';
-  $('#auth-submit').textContent='이 이름으로 시작하기';
+  $('#auth-step').textContent='클라우드 신규 회원 등록';
+  $('#auth-heading').textContent='K2당구장 회원 등록';
+  $('#auth-description').textContent='처음 한 번 이름과 핸디를 등록하면 같은 브라우저에서 자동 접속돼요.';
+  $('#auth-inputs').innerHTML='<div class="auth-mode-note">🔒 서버에 익명 계정을 만들고 이 기기에 로그인 상태를 저장합니다. 앱 데이터 삭제·로그아웃 시 계정을 복구할 수 없으니 주의하세요.</div>';
+  $('#auth-submit').textContent='서버에 등록하고 시작하기';
   $('#auth-submit').disabled=!a.value.trim();
   return;
  }
@@ -1064,7 +1200,7 @@ function authFields(){
  $('#auth-submit').disabled=!u;
  if(!u){$('#auth-submit').textContent='이름을 선택해 주세요';return}
  const exists=Boolean(auth.profiles[String(id)]);
- $('#auth-inputs').innerHTML=`<div class="auth-avatar">🎱 ${safe(u.name)} 선수 · 핸디 ${u.handicap}점</div><div class="auth-mode-note">${exists?'이 기기에 이전 사용 기록이 있어요.':'이 기기에서는 처음 사용하는 이름이에요.'} 이 체험판은 이름 선택만으로 접속되며 실제 본인 확인은 정식 버전에서 연결됩니다.</div>`;
+ $('#auth-inputs').innerHTML=`<div class="auth-avatar">🎱 ${safe(u.name)} 선수 · 핸디 ${u.handicap}점</div><div class="auth-mode-note">${exists?'이 기기에 이전 사용 기록이 있어요.':'이 기기에서는 처음 사용하는 이름이에요.'} 현재 등록 계정만 로그인할 수 있습니다.</div>`;
  $('#auth-submit').textContent=exists?'내 기록으로 접속하기':'이 이름으로 시작하기';
 }
 function enterApp(id){
@@ -1073,25 +1209,46 @@ function enterApp(id){
  $('#auth-gate').hidden=true;$('#app-page').hidden=false;document.body.classList.remove('auth-view');
  render();window.scrollTo(0,0);openNextNotice();
 }
-function logoutAuth(){
- auth.sessionId=null;storeAuth();showingNoticeId=null;$('#k2-complete-dialog').hidden=true;document.body.classList.remove('focus-menu-open');showGate();
-}
-function submitAuth(e){
- e.preventDefault();const err=$('#auth-error');err.textContent='';
- if(newMemberMode){
-  const memberName=$('#auth-new-name').value.trim(),handicap=Number($('#auth-new-handicap').value);
-  if(!memberName||memberName.length>20){err.textContent='이름을 1~20자로 입력해 주세요.';return}
-  if(!Number.isInteger(handicap)||handicap<1||handicap>50){err.textContent='핸디는 1~50 사이 숫자로 입력해 주세요.';return}
-  if(state.users.some(u=>u.name.trim().toLocaleLowerCase()===memberName.toLocaleLowerCase())){
-   err.textContent='이미 등록된 이름이에요. 기존 회원 명단에서 선택해 주세요.';return;
-  }
-  const id=Math.max(0,...state.users.map(u=>u.id))+1;
-  state.users.push({id,name:memberName,handicap});ensureHandi(id);save();enterApp(id);return;
+ async function logoutAuth(){
+   if(!confirm('로그아웃하면 익명 계정을 다시 복구하기 어려울 수 있어요. 계속할까요?'))return;
+   try{await db?.auth.signOut()}catch(e){console.warn(e)}
+   cloudUser=null;myMemberUuid=null;auth={profiles:{},sessionId:null};storeAuth();state.live=null;
+   $('#k2-complete-dialog').hidden=true;document.body.classList.remove('focus-menu-open');showGate();
  }
- const chosen=Number($('#auth-member').value);
- if(!user(chosen)){err.textContent='본인 이름을 선택해 주세요.';return}
- enterApp(chosen);
-}
+ async function submitAuth(e){
+   e.preventDefault();const err=$('#auth-error');err.textContent='';
+   const memberName=$('#auth-new-name').value.trim(),handicap=Number($('#auth-new-handicap').value);
+   if(!memberName||memberName.length>20){err.textContent='이름을 1~20자로 입력해 주세요.';return}
+   if(!Number.isInteger(handicap)||handicap<1||handicap>50){err.textContent='핸디는 1~50 사이 숫자로 입력해 주세요.';return}
+   if(!db){err.textContent='인터넷 연결을 확인한 뒤 다시 시도해 주세요.';return}
+   if(cloudBusy)return;
+   cloudBusy=true;$('#auth-submit').disabled=true;$('#auth-submit').textContent='서버 등록 중...';
+   try{
+     let {data:{user:me},error:userError}=await db.auth.getUser();
+     if(userError||!me){
+        const authRes=await db.auth.signInAnonymously();
+        if(authRes.error)throw authRes.error;
+        me=authRes.data.user;
+     }
+     if(!me)throw new Error('로그인 계정 생성에 실패했습니다.');
+     cloudUser=me;
+     const existing=await db.from('members').select('id,name,handicap').eq('auth_user_id',me.id).maybeSingle();
+     if(existing.error)throw existing.error;
+     if(existing.data){myMemberUuid=existing.data.id}
+     else{
+       const res=await db.from('members').insert({name:memberName,handicap,auth_user_id:me.id}).select('id').single();
+       if(res.error)throw res.error;
+       myMemberUuid=res.data.id;
+     }
+     memberNum(myMemberUuid);
+     await pullCloud(true);
+     if(!state.users.some(u=>u.id===memberNum(myMemberUuid)))state.users.push({id:memberNum(myMemberUuid),name:memberName,handicap});
+     enterApp(memberNum(myMemberUuid));
+     setInterval(()=>{if(cloudUser&&!cloudBusy)pullCloud()},5000);
+   }catch(ex){
+     err.textContent='가입 실패: '+String(ex.message||ex).slice(0,170);
+   }finally{cloudBusy=false;$('#auth-submit').disabled=false;$('#auth-submit').textContent='서버에 등록하고 시작하기'}
+ }
 function showBioInfo(){
  $('#bio-info-dialog').hidden=false;
  $('#bio-support-result').textContent='아래에서 현재 브라우저의 생체인식 지원 가능 여부를 확인해 보세요.';
@@ -1109,7 +1266,7 @@ async function checkBioSupport(){
   out.textContent=supported?'이 브라우저에서 기기 인증 기능을 사용할 수 있어 보여요. 단, 실제 로그인 연결에는 서버와 패스키 등록이 필요해요.':'이 브라우저에서는 플랫폼 인증 장치가 확인되지 않았어요. 다른 기기 인증 수단이나 별도 로그인 방법이 필요할 수 있어요.';
  }catch(_){out.textContent='지원 여부를 확인하지 못했어요. 브라우저 설정이나 보안 연결을 확인해 주세요.'}
 }
-$('#auth-new-toggle').addEventListener('click',()=>{newMemberMode=!newMemberMode;authFields();if(newMemberMode)$('#auth-new-name').focus()});
+// 등록된 타인 이름으로 로그인하는 기능은 보안상 지원하지 않습니다.
 $('#auth-new-name').addEventListener('input',authFields);
 $('#auth-bio-gate').addEventListener('click',showBioInfo);
 $('#bio-info-close').addEventListener('click',hideBioInfo);
@@ -1324,8 +1481,11 @@ function live(){
  }
 
  const turn=L.turn,mine=turn===L.a?0:1,turnName=matchName(L,turn),now=L.points[mine];
- const wins=L.scores[0]>=L.targets[0]||L.scores[1]>=L.targets[1];
- const playerCards=[{id:L.a,score:L.scores[0],target:L.targets[0],inning:L.innings[0],high:L.highs[0],ball:'yellow'},{id:L.b,score:L.scores[1],target:L.targets[1],inning:L.innings[1],high:L.highs[1],ball:'white'}];
+ // 미확정 득점도 큰 점수에 즉시 표시하고, 0(차례 종료) 때 확정합니다.
+ const shownScores=[L.scores[0]+L.points[0],L.scores[1]+L.points[1]];
+ const wins=shownScores[0]>=L.targets[0]||shownScores[1]>=L.targets[1];
+ const playerCards=[{id:L.a,score:shownScores[0],target:L.targets[0],inning:L.innings[0],high:L.highs[0],ball:'yellow'},
+                    {id:L.b,score:shownScores[1],target:L.targets[1],inning:L.innings[1],high:L.highs[1],ball:'white'}];
  const renderPlayerCard=p=>`<div class="player-card k2-player-card ${p.ball==='yellow'?'yellow-side':'white-side'} ${turn===p.id?'current-turn '+(p.ball==='white'?'white-turn':''):'waiting-turn'}"><div class="name-row"><div class="player-name"><span class="player-dot ${p.ball==='yellow'?'player-yellow':'player-white'}"></span>${matchName(L,p.id)}</div><span class="turn-pill ${turn===p.id?'':'wait-pill'}">${turn===p.id?'● 공격 중':'대기'}</span></div><div class="scoreline"><span class="big-score ${p.ball==='yellow'?'yellow-text':'white-text'}">${p.score}</span><span class="target">/ ${p.target}</span></div><div class="statrow"><span>AVG <b>${fmt(p.inning?p.score/p.inning:0)}</b></span><span>하이런 <b>${p.high}</b></span></div></div>`;
  const goal=L.goalPrompt;
  const goalIdx=goal?(goal.player===L.a?0:1):-1;
@@ -1343,7 +1503,7 @@ function live(){
  return `<div class="card"><div class="row" style="margin-bottom:14px"><div><h2 style="margin:0">실시간 점수판</h2><span class="muted">노랑공 vs 흰공 · 총 ${L.history.length}차례 기록</span></div><span class="pill pending">${isGuestMatch(L)?'🎉 이벤트 경기':'경기 진행 중'}</span></div>${attackerBanner}<div class="scoreboard">${scoreboardHTML}</div>${wins?'<div class="note">목표 점수에 도달했어요. 계속 진행을 선택했다면 기록을 더 입력할 수 있습니다.</div>':''}</div><div class="card"><div class="turn-header"><div><h2 style="margin:0 0 8px">득점 입력</h2><p class="muted">+1 · +2로 득점을 누적하고, 0을 누르면 현재 점수를 기록한 뒤 상대 차례로 넘어갑니다.</p></div><div class="total-box"><span class="total-badge">이번 차례 누적</span><span class="turn-points">${now}점</span></div></div><div class="control-buttons"><button type="button" class="score-btn btn-minus" data-act="live-add" data-n="-1">-1</button><button type="button" class="score-btn btn-zero" data-act="live-commit" data-n="0"><span>0</span><span class="score-sub">차례 종료</span></button><button type="button" class="score-btn btn-plus1" data-act="live-add" data-n="1">+1</button><button type="button" class="score-btn btn-plus2" data-act="live-add" data-n="2">+2</button></div><div class="grid2" style="margin-top:14px"><button class="ghost" style="padding:16px" data-act="live-undo" ${L.history.length?'':'disabled'}>↩ 이전 차례 취소</button><button class="ghost" style="padding:16px" data-act="live-abandon">✕ 경기 취소</button></div></div><div class="card compact-record"><div class="row" style="margin-bottom:5px"><h3 style="margin:0">이닝별 득점 기록</h3><span class="muted small">최근 3이닝 · 스크롤</span></div><div class="inning-scroll" role="region" aria-label="전체 이닝별 득점 기록, 최근 이닝부터 표시" tabindex="0"><table class="inning-table"><thead><tr><th>이닝</th><th>🟡 ${matchName(L,L.a)}</th><th>⚪ ${matchName(L,L.b)}</th></tr></thead><tbody>${hist}</tbody></table></div></div>${goalDialog}`;
 }
 function liveRecalc(L){L.scores=[0,0];L.innings=[0,0];L.highs=[0,0];for(const h of L.history){const i=h.p===L.a?0:1;L.scores[i]+=h.points;L.innings[i]++;L.highs[i]=Math.max(L.highs[i],h.points)}L.turn=L.history.length?(L.history[L.history.length-1].p===L.a?L.b:L.a):L.first}
-function finalizeLiveGame(L,winner){
+ async function finalizeLiveGame(L,winner){
    if(isGuestMatch(L)){
      const eventId=Math.max(0,...state.events.map(g=>Number(g.id)||0))+1;
      state.events.push({id:eventId,kind:'guest',memberId:state.current,guestName:L.guestName,a:L.a,b:L.b,pa:L.scores[0],pb:L.scores[1],ia:L.innings[0],ib:L.innings[1],hiA:L.highs[0],hiB:L.highs[1],winner,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),inningLog:[...L.history]});
@@ -1351,30 +1511,36 @@ function finalizeLiveGame(L,winner){
      flash('🎉 이벤트 경기 저장 완료! 정규 승률·AVG·순위에는 반영되지 않았어요.');
      return;
    }
+   cloudBusy=true;
+   try{await cloudFinish(L,winner)}catch(error){
+      syncMessage('⚠ 경기 종료 저장 실패: '+String(error.message||error).slice(0,110),true);
+      cloudBusy=false;flash('서버에 경기 종료를 저장하지 못했어요. 다시 시도해 주세요.','alert');return;
+   }
+   cloudBusy=false;
    const createdBy=state.current;
    const gameId=Math.max(0,...state.games.map(g=>g.id))+1;
    state.games.push({id:gameId,a:L.a,b:L.b,pa:L.scores[0],pb:L.scores[1],ia:L.innings[0],ib:L.innings[1],winner,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),status:'confirmed',createdBy,hiA:L.highs[0],hiB:L.highs[1],handiA:L.targets[0],handiB:L.targets[1],inningLog:[...L.history]});
-   const grown=applyHandiLevels([L.a,L.b],gameId);
+   const grown=[]; // 서버 핸디 자동승급은 아직 구현되지 않았습니다.
    const opponent=L.a===state.current?L.b:L.a;
    // A single unread completion notice is assigned ONLY to the other participant.
    if(opponent!==state.current){
      state.notifications.push({id:Date.now().toString(36)+'-'+gameId,to:opponent,gameId,seen:false,createdAt:new Date().toISOString()});
    }
    state.live=null;state.tab='home';render();
-   flash(grown.length?'🏆 핸디 레벨업! '+grown.map(x=>x.name+' '+x.previous+'→'+x.next+'점').join(', '):'경기 종료 · 두 선수 기록 저장 완료! 상대방 완료 알림을 보관했습니다.');
+   flash(grown.length?'🏆 핸디 레벨업! '+grown.map(x=>x.name+' '+x.previous+'→'+x.next+'점').join(', '):'경기 종료 · 서버에 경기 기록을 저장했습니다! (푸시 알림은 아직 미지원)');
    if(grown.length)showLevelUp(grown);
 }
 function liveAction(act,el){
  const L=state.live;
  if(L&&L.a!==state.current&&L.b!==state.current)return;
- if(act==='live-abandon'){if(!L)return;if(!confirm('진행 중인 경기 기록을 취소하시겠습니까?'))return;state.live=null;render();flash('진행 중인 경기를 취소했습니다.');return}
+ if(act==='live-abandon'){if(!L)return;if(!confirm('진행 중인 경기 기록을 취소하시겠습니까?'))return;if(L.kind==='member'&&L.remoteId){db.from('matches').update({status:'cancelled'}).eq('id',L.remoteId).then(({error})=>{if(error)syncMessage('경기 취소 서버 저장 실패: '+error.message,true)})}state.live=null;render();flash('진행 중인 경기를 취소했습니다.');return}
  if(!L)return;
  if(!Array.isArray(L.goalNotified))L.goalNotified=[false,false];
  // 확인 창이 열려 있으면 경기 조작을 막습니다.
  if(L.goalPrompt&&act!=='live-goal-continue'&&act!=='live-goal-finish')return;
  if(act==='live-goal-continue'){
    if(!L.goalPrompt)return;
-   L.goalPrompt=null;render();return;
+   L.goalPrompt=null;render();cloudSaveLive(L);return;
  }
  if(act==='live-goal-finish'){
    if(!L.goalPrompt)return;
@@ -1395,7 +1561,7 @@ function liveAction(act,el){
    if(before<L.targets[i]&&after>=L.targets[i]&&!L.goalNotified[i]){
      L.goalNotified[i]=true;L.goalPrompt={player:L.turn,committed:false};
    }
-   render();return;
+   render();cloudSaveLive(L);return;
  }
  if(act==='live-commit'){
    const i=L.turn===L.a?0:1,player=L.turn;
@@ -1405,13 +1571,13 @@ function liveAction(act,el){
    if(before<L.targets[i]&&L.scores[i]>=L.targets[i]&&!L.goalNotified[i]){
      L.goalNotified[i]=true;L.goalPrompt={player,committed:true};
    }
-   render();return;
+   render();cloudSaveLive(L);return;
  }
  if(act==='live-undo'){
    if(!L.history.length)return;
    L.history.pop();L.points=[0,0];liveRecalc(L);
    L.goalNotified=L.scores.map((score,i)=>score>=L.targets[i]&&L.goalNotified[i]);
-   render();flash('마지막 차례 기록을 취소했습니다.');return;
+   render();cloudSaveLive(L);flash('마지막 차례 기록을 취소했습니다.');return;
  }
 }
 function eventRow(g){
@@ -1420,7 +1586,7 @@ function eventRow(g){
  return `<div class="game"><div><div class="muted small">${safe(g.date)} · 🎉 이벤트 경기</div><strong>${person(g.a)} ${g.pa} : ${g.pb} ${person(g.b)}</strong><div class="muted small">${won?'승리':'패배'} · 이닝 ${g.ia} : ${g.ib} · 승자 ${person(g.winner)}</div><span class="pill event-pill">정규 통계 미포함</span></div></div>`;
 }
 function records(){const arr=myGames(),events=myEventGames();return `<div class="card"><h2>내 정규 경기 내역</h2><p class="muted small" style="margin:6px 0 14px">${name(state.current)}님이 참가한 정규 경기만 표시합니다. 다른 회원끼리 진행한 경기의 상세 기록은 볼 수 없습니다.</p>${arr.length?arr.map(g=>gameRow(g)).join(''):'<div class="empty">참가한 정규 경기 기록이 없습니다.</div>'}</div><section class="card guest-record-panel"><div class="row"><h2>🎉 내 이벤트 경기 내역</h2><span class="pill event-pill">정규 통계 제외</span></div><p class="muted small" style="margin:8px 0 12px">게스트와 진행한 경기는 이곳에만 별도로 저장됩니다. 회원 승률·AVG·순위·월별 기록에 포함되지 않습니다.</p>${events.length?events.map(eventRow).join(''):'<div class="empty">아직 이벤트 경기 기록이 없습니다.</div>'}</section>`}
-function ranking(){return `<div class="card"><h2>모임 순위표</h2><p class="muted" style="margin-bottom:14px">정렬: 승률 → 경기수 → 에버리지. 저장 완료된 경기만 계산합니다.</p>${rankingTable(ranks())}</div><div class="card"><h2>선수 목록</h2>${state.users.map(u=>`<div class="game"><div><strong>${safe(u.name)}</strong> <span class="muted">· 핸디 ${u.handicap}점</span></div><div class="muted small">${stat(u.id).games}경기</div></div>`).join('')}</div><div class="card"><h2>체험용 회원 추가</h2><form id="addform" class="grid2"><label class="field">별명<input name="name" maxlength="20" required placeholder="예: 동호"></label><label class="field">핸디<input type="number" name="handicap" min="1" max="50" value="20" required></label><div><button class="primary">회원 추가</button></div></form><p class="muted small">이 화면의 회원은 이 브라우저에만 추가됩니다.</p></div>`}
+function ranking(){return `<div class="card"><h2>모임 순위표</h2><p class="muted" style="margin-bottom:14px">정렬: 승률 → 경기수 → 에버리지. 저장 완료된 경기만 계산합니다.</p>${rankingTable(ranks())}</div><div class="card"><h2>선수 목록</h2>${state.users.map(u=>`<div class="game"><div><strong>${safe(u.name)}</strong> <span class="muted">· 핸디 ${u.handicap}점</span></div><div class="muted small">${stat(u.id).games}경기</div></div>`).join('')}</div><div class="card cloud-hide"><h2>체험용 회원 추가</h2><form id="addform" class="grid2"><label class="field">별명<input name="name" maxlength="20" required placeholder="예: 동호"></label><label class="field">핸디<input type="number" name="handicap" min="1" max="50" value="20" required></label><div><button class="primary">회원 추가</button></div></form><p class="muted small">이 화면의 회원은 이 브라우저에만 추가됩니다.</p></div>`}
 function render(){if(!activeProfile()){showGate();return}const tabs=[['home','🏠 홈'],['live','🎱 실시간 점수'],['records','내 경기 내역'],['ranking','회원·순위']];$('#account-button').textContent=name(state.current)+' · 로그아웃';$('#memberCount').textContent=`회원 ${state.users.length}명 · 확정 ${confirmed().length}경기`;$('#tabs').innerHTML=tabs.map(([id,title])=>`<button class="tab ${state.tab===id?'active':''}" data-act="nav" data-tab="${id}">${title}</button>`).join('');$('#view').innerHTML=({home,live,records,ranking,bulletins}[state.tab]||home)();save();refreshNoticeBadge();if(state.live?.goalPrompt){document.querySelector('.goal-end')?.focus()}}
 function updateFirstPickLabels(){
  const yellow=document.getElementById('live-yellow'),white=document.getElementById('live-white');if(!yellow||!white)return;
@@ -1437,7 +1603,7 @@ if(act==='match-mode'){if(state.live)return;state.startMode=el.dataset.mode==='g
  const yellow=document.getElementById('live-yellow'),white=document.getElementById('live-white');if(!yellow||!white)return;
  const previous=yellow.value;yellow.value=white.value;white.value=previous;updateFirstPickLabels();return;
 }if(act==='toggle-menu'){const open=document.body.classList.toggle('focus-menu-open');el.setAttribute('aria-expanded',String(open));return}if(act==='month-pick'){state.monthView=el.dataset.month;render();return}if(act.startsWith('live-')){liveAction(act,el);return}if(act==='nav'){state.tab=el.dataset.tab;document.body.classList.remove('focus-menu-open');render();return}});
-document.addEventListener('submit',e=>{if(e.target.id==='auth-form'){submitAuth(e);return}if(!activeProfile()){e.preventDefault();showGate();return}if(e.target.id==='bulletin-form'){e.preventDefault();const f=new FormData(e.target);const title=String(f.get('title')||'').trim(),body=String(f.get('body')||'').trim();if(!title||title.length>70||!body||body.length>1500)return flash('공지 제목과 내용을 확인해 주세요.','alert');let id=bulletinEditId;if(id!==null){const b=state.bulletins.find(b=>b.id===id);if(!b)return flash('수정할 공지를 찾을 수 없습니다.','alert');b.title=title;b.body=body;b.example=false;}else{id=Math.max(0,...state.bulletins.map(b=>Number(b.id)||0))+1;state.bulletins.push({id,title,body,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),example:false});}state.bulletinOpenId=id;bulletinEditId=null;render();flash('공지사항이 저장되었습니다.');return}
+document.addEventListener('submit',async e=>{if(e.target.id==='auth-form'){submitAuth(e);return}if(!activeProfile()){e.preventDefault();showGate();return}if(e.target.id==='bulletin-form'){e.preventDefault();const f=new FormData(e.target);const title=String(f.get('title')||'').trim(),body=String(f.get('body')||'').trim();if(!title||title.length>70||!body||body.length>1500)return flash('공지 제목과 내용을 확인해 주세요.','alert');let id=bulletinEditId;if(id!==null){const b=state.bulletins.find(b=>b.id===id);if(!b)return flash('수정할 공지를 찾을 수 없습니다.','alert');b.title=title;b.body=body;b.example=false;}else{id=Math.max(0,...state.bulletins.map(b=>Number(b.id)||0))+1;state.bulletins.push({id,title,body,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),example:false});}state.bulletinOpenId=id;bulletinEditId=null;render();flash('공지사항이 저장되었습니다.');return}
 if(e.target.id==='live-start'){e.preventDefault();if(state.live)return flash('먼저 진행 중인 경기를 종료하거나 취소해 주세요.','alert');const f=new FormData(e.target),a=Number(f.get('yellow')),b=Number(f.get('white')),guest=state.startMode==='guest';
   if(a===b)return flash('노란공과 흰공 선수를 서로 다르게 선택해 주세요.','alert');
   if(a!==state.current&&b!==state.current)return flash('본인이 참가하는 경기를 선택해 주세요.','alert');
@@ -1449,6 +1615,8 @@ if(e.target.id==='live-start'){e.preventDefault();if(state.live)return flash('�
     if(!Number.isInteger(guestHandicap)||guestHandicap<1||guestHandicap>50)return flash('게스트 핸디는 1~50점 사이로 입력해 주세요.','alert');
   }else if(!user(a)||!user(b))return flash('등록된 회원을 선택해 주세요.','alert');
   const first=f.get('first')==='white'?b:a;
-  state.live={kind:guest?'guest':'member',guestName,a,b,first,turn:first,targets:[a===guestId?guestHandicap:user(a).handicap,b===guestId?guestHandicap:user(b).handicap],scores:[0,0],innings:[0,0],highs:[0,0],points:[0,0],history:[],goalNotified:[false,false],goalPrompt:null};render();window.scrollTo(0,0);flash(guest?'🎉 게스트 이벤트 경기를 시작했어요. 정규 통계에는 포함되지 않습니다.':'경기를 시작했습니다. 현재 공격 선수의 득점을 입력하세요.');return}if(e.target.id==='addform'){e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')||'').trim(),handicap=Number(f.get('handicap'));if(!name||handicap<1||handicap>50||state.users.some(u=>u.name===name))return flash('별명 또는 핸디를 확인해주세요.','alert');const id=Math.max(0,...state.users.map(u=>u.id))+1;state.users.push({id,name,handicap});ensureHandi(id);render();flash(name+'님이 체험용 명단에 추가되었습니다.')}});
-if(activeProfile()){enterApp(Number(auth.sessionId))}else{showGate()}})();
+   const newLive={kind:guest?'guest':'member',guestName,a,b,first,turn:first,targets:[a===guestId?guestHandicap:user(a).handicap,b===guestId?guestHandicap:user(b).handicap],scores:[0,0],innings:[0,0],highs:[0,0],points:[0,0],history:[],goalNotified:[false,false],goalPrompt:null};
+   if(!guest){try{newLive.remoteId=await cloudCreate(newLive)}catch(error){return flash('경기 서버 등록 실패: '+String(error.message||error).slice(0,100),'alert')}}
+   state.live=newLive;render();window.scrollTo(0,0);flash(guest?'🎉 게스트 이벤트 경기를 시작했어요. 정규 통계에는 포함되지 않습니다.':'경기를 시작했습니다. 현재 공격 선수의 득점을 입력하세요.');return}if(e.target.id==='addform'){e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')||'').trim(),handicap=Number(f.get('handicap'));if(!name||handicap<1||handicap>50||state.users.some(u=>u.name===name))return flash('별명 또는 핸디를 확인해주세요.','alert');const id=Math.max(0,...state.users.map(u=>u.id))+1;state.users.push({id,name,handicap});ensureHandi(id);render();flash(name+'님이 체험용 명단에 추가되었습니다.')}});
+showGate();startCloud();})();
 </script></body></html>
