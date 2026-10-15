@@ -1620,3 +1620,4 @@ if(e.target.id==='live-start'){e.preventDefault();if(state.live)return flash('�
    state.live=newLive;render();window.scrollTo(0,0);flash(guest?'🎉 게스트 이벤트 경기를 시작했어요. 정규 통계에는 포함되지 않습니다.':'경기를 시작했습니다. 현재 공격 선수의 득점을 입력하세요.');return}if(e.target.id==='addform'){e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')||'').trim(),handicap=Number(f.get('handicap'));if(!name||handicap<1||handicap>50||state.users.some(u=>u.name===name))return flash('별명 또는 핸디를 확인해주세요.','alert');const id=Math.max(0,...state.users.map(u=>u.id))+1;state.users.push({id,name,handicap});ensureHandi(id);render();flash(name+'님이 체험용 명단에 추가되었습니다.')}});
 showGate();startCloud();})();
 </script></body></html>
+<!-- K2 redeploy 2026-10-15 -->
