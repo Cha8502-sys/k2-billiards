@@ -1530,10 +1530,50 @@ function liveRecalc(L){L.scores=[0,0];L.innings=[0,0];L.highs=[0,0];for(const h 
    flash(grown.length?'🏆 핸디 레벨업! '+grown.map(x=>x.name+' '+x.previous+'→'+x.next+'점').join(', '):'경기 종료 · 서버에 경기 기록을 저장했습니다! (푸시 알림은 아직 미지원)');
    if(grown.length)showLevelUp(grown);
 }
-function liveAction(act,el){
+let cancellingLive=false;
+async function cancelCloudMatch(L){
+ if(!db||!L.remoteId)throw new Error('서버 경기 정보가 없어 취소할 수 없습니다.');
+ // 이미 예약된 점수 저장이 취소 상태를 덮거나 지연시키지 않도록 먼저 완료를 기다립니다.
+ await cloudQueue;
+ const {data,error}=await db.from('matches')
+   .update({status:'cancelled'})
+   .eq('id',L.remoteId).eq('status','in_progress')
+   .select('id,status');
+ if(error)throw error;
+ if(Array.isArray(data)&&data.length===1&&data[0].status==='cancelled')return;
+ // RLS 정책에 의해 UPDATE가 0건 처리되어도 오류가 없을 수 있으므로 상태를 재확인합니다.
+ const verification=await db.from('matches').select('status').eq('id',L.remoteId).maybeSingle();
+ if(verification.error)throw verification.error;
+ if(verification.data?.status==='cancelled')return;
+ throw new Error('서버에서 경기 취소가 확인되지 않았습니다. Supabase 경기 수정 권한을 확인해야 합니다.');
+}
+async function liveAction(act,el){
  const L=state.live;
+ if(cancellingLive)return;
  if(L&&L.a!==state.current&&L.b!==state.current)return;
- if(act==='live-abandon'){if(!L)return;if(!confirm('진행 중인 경기 기록을 취소하시겠습니까?'))return;if(L.kind==='member'&&L.remoteId){db.from('matches').update({status:'cancelled'}).eq('id',L.remoteId).then(({error})=>{if(error)syncMessage('경기 취소 서버 저장 실패: '+error.message,true)})}state.live=null;render();flash('진행 중인 경기를 취소했습니다.');return}
+ if(act==='live-abandon'){
+  if(!L||!confirm('진행 중인 경기 기록을 취소하시겠습니까?'))return;
+  cancellingLive=true;
+  lastEditAt=Date.now();
+  if(el)el.disabled=true;
+  syncMessage('● 경기 취소를 서버에 요청하는 중...');
+  try{
+   if(L.kind==='member')await cancelCloudMatch(L);
+   // 서버 취소에 성공한 경우에만 화면에서 경기를 종료합니다.
+   if(state.live?.remoteId===L.remoteId)state.live=null;
+   state.tab='home';
+   lastEditAt=Date.now();
+   render();
+   syncMessage('● 경기 취소가 서버에서 확인되었습니다.');
+   flash('진행 중인 경기를 취소했습니다.');
+  }catch(error){
+   const msg=String(error?.message||error).slice(0,150);
+   syncMessage('⚠ 경기 취소 실패: '+msg,true);
+   flash('경기 취소 실패: '+msg,'alert');
+   if(el)el.disabled=false;
+  }finally{cancellingLive=false}
+  return;
+ }
  if(!L)return;
  if(!Array.isArray(L.goalNotified))L.goalNotified=[false,false];
  // 확인 창이 열려 있으면 경기 조작을 막습니다.
@@ -1620,4 +1660,5 @@ if(e.target.id==='live-start'){e.preventDefault();if(state.live)return flash('�
    state.live=newLive;render();window.scrollTo(0,0);flash(guest?'🎉 게스트 이벤트 경기를 시작했어요. 정규 통계에는 포함되지 않습니다.':'경기를 시작했습니다. 현재 공격 선수의 득점을 입력하세요.');return}if(e.target.id==='addform'){e.preventDefault();const f=new FormData(e.target),name=String(f.get('name')||'').trim(),handicap=Number(f.get('handicap'));if(!name||handicap<1||handicap>50||state.users.some(u=>u.name===name))return flash('별명 또는 핸디를 확인해주세요.','alert');const id=Math.max(0,...state.users.map(u=>u.id))+1;state.users.push({id,name,handicap});ensureHandi(id);render();flash(name+'님이 체험용 명단에 추가되었습니다.')}});
 showGate();startCloud();})();
 </script></body></html>
+
 <!-- K2 redeploy 2026-10-15 -->
